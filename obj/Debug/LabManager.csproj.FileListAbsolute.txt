@@ -1,0 +1,12 @@
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\bin\Debug\LabManagement.exe.config
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\bin\Debug\LabManagement.exe
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\bin\Debug\LabManagement.pdb
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\obj\Debug\LabManager.csprojAssemblyReference.cache
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\obj\Debug\LabManagement.Form1.resources
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\obj\Debug\LabManagement.frmLogin.resources
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\obj\Debug\LabManagement.Properties.Resources.resources
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\obj\Debug\LabManager.csproj.GenerateResource.cache
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\obj\Debug\LabManager.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\obj\Debug\LabManagement.exe
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\obj\Debug\LabManagement.pdb
+D:\OneDrive\Documents\DaiHoc_Nam2_Ky2\LapTrinhTrenWindows\LabManagement\obj\Debug\LabManagement.urcDashBoard.resources
