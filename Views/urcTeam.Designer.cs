@@ -96,7 +96,7 @@
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Calibri Light", 12F);
             this.button1.Location = new System.Drawing.Point(1000, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 30);
@@ -109,10 +109,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Century Schoolbook", 15.75F);
+            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(10, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 25);
+            this.label1.Size = new System.Drawing.Size(65, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Teams";
             // 
@@ -121,6 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Calibri Light", 8.25F);
             this.Name = "urcTeam";
             this.Size = new System.Drawing.Size(1159, 646);
             this.panel1.ResumeLayout(false);
