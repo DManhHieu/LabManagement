@@ -74,6 +74,7 @@
             // 
             this.pnlActivity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.pnlActivity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlActivity.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlActivity.Location = new System.Drawing.Point(141, 35);
             this.pnlActivity.Name = "pnlActivity";
             this.pnlActivity.Size = new System.Drawing.Size(1159, 645);
@@ -86,6 +87,7 @@
             this.panel1.Controls.Add(this.picClose);
             this.panel1.Controls.Add(this.lblLabInfo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Calibri Light", 12F);
             this.panel1.Location = new System.Drawing.Point(141, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1159, 35);
@@ -149,6 +151,7 @@
             this.pnlMenu.Controls.Add(this.btnDashBoardMenu);
             this.pnlMenu.Controls.Add(this.pnlDashBoardMenu);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.Font = new System.Drawing.Font("Calibri Light", 12F);
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(141, 680);
@@ -169,7 +172,7 @@
             this.btnMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
             this.btnMail.FlatAppearance.BorderSize = 0;
             this.btnMail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMail.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMail.Font = new System.Drawing.Font("Calibri Light", 12F);
             this.btnMail.ForeColor = System.Drawing.Color.Black;
             this.btnMail.Image = global::LabManagement.Properties.Resources.mail;
             this.btnMail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,7 +198,7 @@
             this.btnBudgetMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
             this.btnBudgetMenu.FlatAppearance.BorderSize = 0;
             this.btnBudgetMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBudgetMenu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBudgetMenu.Font = new System.Drawing.Font("Calibri Light", 12F);
             this.btnBudgetMenu.ForeColor = System.Drawing.Color.Black;
             this.btnBudgetMenu.Image = global::LabManagement.Properties.Resources.finace;
             this.btnBudgetMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,7 +225,7 @@
             this.btnTimeMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
             this.btnTimeMenu.FlatAppearance.BorderSize = 0;
             this.btnTimeMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimeMenu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimeMenu.Font = new System.Drawing.Font("Calibri Light", 12F);
             this.btnTimeMenu.ForeColor = System.Drawing.Color.Black;
             this.btnTimeMenu.Image = global::LabManagement.Properties.Resources.time;
             this.btnTimeMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,7 +252,7 @@
             this.btnProjectsMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
             this.btnProjectsMenu.FlatAppearance.BorderSize = 0;
             this.btnProjectsMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProjectsMenu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProjectsMenu.Font = new System.Drawing.Font("Calibri Light", 12F);
             this.btnProjectsMenu.ForeColor = System.Drawing.Color.Black;
             this.btnProjectsMenu.Image = global::LabManagement.Properties.Resources.project_management;
             this.btnProjectsMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -276,7 +279,7 @@
             this.btnMyWorkMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
             this.btnMyWorkMenu.FlatAppearance.BorderSize = 0;
             this.btnMyWorkMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyWorkMenu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyWorkMenu.Font = new System.Drawing.Font("Calibri Light", 12F);
             this.btnMyWorkMenu.ForeColor = System.Drawing.Color.Black;
             this.btnMyWorkMenu.Image = global::LabManagement.Properties.Resources.mywork;
             this.btnMyWorkMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,7 +306,7 @@
             this.btnTeamMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
             this.btnTeamMenu.FlatAppearance.BorderSize = 0;
             this.btnTeamMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeamMenu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeamMenu.Font = new System.Drawing.Font("Calibri Light", 12F);
             this.btnTeamMenu.ForeColor = System.Drawing.Color.Black;
             this.btnTeamMenu.Image = global::LabManagement.Properties.Resources.team;
             this.btnTeamMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -330,7 +333,7 @@
             this.btnDashBoardMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
             this.btnDashBoardMenu.FlatAppearance.BorderSize = 0;
             this.btnDashBoardMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashBoardMenu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashBoardMenu.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashBoardMenu.ForeColor = System.Drawing.Color.Black;
             this.btnDashBoardMenu.Image = global::LabManagement.Properties.Resources.dashboard;
             this.btnDashBoardMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -359,6 +362,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1300, 680);
             this.Controls.Add(this.pnlwindows);
+            this.Font = new System.Drawing.Font("Calibri Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";

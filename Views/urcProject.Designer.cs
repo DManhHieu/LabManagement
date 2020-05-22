@@ -125,8 +125,8 @@
             // 
             this.txtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(7, 65);
+            this.txtDescription.Font = new System.Drawing.Font("Calibri Light", 12F);
+            this.txtDescription.Location = new System.Drawing.Point(7, 53);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ReadOnly = true;
@@ -137,8 +137,8 @@
             // lblDueTime
             // 
             this.lblDueTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDueTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDueTime.Location = new System.Drawing.Point(4, 202);
+            this.lblDueTime.Font = new System.Drawing.Font("Calibri Light", 11.25F);
+            this.lblDueTime.Location = new System.Drawing.Point(4, 198);
             this.lblDueTime.Name = "lblDueTime";
             this.lblDueTime.Size = new System.Drawing.Size(247, 23);
             this.lblDueTime.TabIndex = 3;
@@ -148,8 +148,8 @@
             // lblStartTime
             // 
             this.lblStartTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblStartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartTime.Location = new System.Drawing.Point(4, 169);
+            this.lblStartTime.Font = new System.Drawing.Font("Calibri Light", 11.25F);
+            this.lblStartTime.Location = new System.Drawing.Point(4, 162);
             this.lblStartTime.Name = "lblStartTime";
             this.lblStartTime.Size = new System.Drawing.Size(247, 23);
             this.lblStartTime.TabIndex = 3;
@@ -159,8 +159,8 @@
             // lblTitle
             // 
             this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(3, 25);
+            this.lblTitle.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(3, 3);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(249, 37);
             this.lblTitle.TabIndex = 3;
@@ -174,6 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Calibri Light", 8.25F);
             this.Name = "urcProject";
             this.Size = new System.Drawing.Size(275, 300);
             this.panel1.ResumeLayout(false);
