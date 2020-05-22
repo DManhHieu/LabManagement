@@ -70,10 +70,10 @@
             // 
             this.lblDateStart.AutoSize = true;
             this.lblDateStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDateStart.Font = new System.Drawing.Font("Calibri Light", 12F);
+            this.lblDateStart.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateStart.Location = new System.Drawing.Point(3, 17);
             this.lblDateStart.Name = "lblDateStart";
-            this.lblDateStart.Size = new System.Drawing.Size(77, 19);
+            this.lblDateStart.Size = new System.Drawing.Size(80, 20);
             this.lblDateStart.TabIndex = 4;
             this.lblDateStart.Text = "16/5/2020";
             // 
@@ -81,10 +81,10 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblStatus.Font = new System.Drawing.Font("Calibri Light", 12F);
+            this.lblStatus.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(3, 17);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(43, 19);
+            this.lblStatus.Size = new System.Drawing.Size(48, 20);
             this.lblStatus.TabIndex = 5;
             this.lblStatus.Text = "Open";
             // 
@@ -92,10 +92,10 @@
             // 
             this.lblComplete.AutoSize = true;
             this.lblComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblComplete.Font = new System.Drawing.Font("Calibri Light", 12F);
+            this.lblComplete.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplete.Location = new System.Drawing.Point(3, 17);
             this.lblComplete.Name = "lblComplete";
-            this.lblComplete.Size = new System.Drawing.Size(36, 19);
+            this.lblComplete.Size = new System.Drawing.Size(40, 20);
             this.lblComplete.TabIndex = 6;
             this.lblComplete.Text = "20%";
             // 
@@ -103,10 +103,10 @@
             // 
             this.lblDuartion.AutoSize = true;
             this.lblDuartion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDuartion.Font = new System.Drawing.Font("Calibri Light", 12F);
+            this.lblDuartion.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDuartion.Location = new System.Drawing.Point(4, 17);
             this.lblDuartion.Name = "lblDuartion";
-            this.lblDuartion.Size = new System.Drawing.Size(58, 19);
+            this.lblDuartion.Size = new System.Drawing.Size(65, 20);
             this.lblDuartion.TabIndex = 7;
             this.lblDuartion.Text = "14 days";
             // 
@@ -114,10 +114,10 @@
             // 
             this.lblDateEnd.AutoSize = true;
             this.lblDateEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDateEnd.Font = new System.Drawing.Font("Calibri Light", 12F);
+            this.lblDateEnd.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateEnd.Location = new System.Drawing.Point(3, 17);
             this.lblDateEnd.Name = "lblDateEnd";
-            this.lblDateEnd.Size = new System.Drawing.Size(77, 19);
+            this.lblDateEnd.Size = new System.Drawing.Size(80, 20);
             this.lblDateEnd.TabIndex = 8;
             this.lblDateEnd.Text = "30/5/2020";
             // 
@@ -251,10 +251,10 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUser.Font = new System.Drawing.Font("Calibri Light", 12F);
+            this.lblUser.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.Location = new System.Drawing.Point(3, 17);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(158, 19);
+            this.lblUser.Size = new System.Drawing.Size(180, 20);
             this.lblUser.TabIndex = 4;
             this.lblUser.Text = "Lập trình trên windows";
             // 
@@ -304,10 +304,10 @@
             // 
             this.lblNameTask.AutoSize = true;
             this.lblNameTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNameTask.Font = new System.Drawing.Font("Calibri Light", 12F);
+            this.lblNameTask.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameTask.Location = new System.Drawing.Point(50, 17);
             this.lblNameTask.Name = "lblNameTask";
-            this.lblNameTask.Size = new System.Drawing.Size(84, 19);
+            this.lblNameTask.Size = new System.Drawing.Size(95, 20);
             this.lblNameTask.TabIndex = 10;
             this.lblNameTask.Text = "Công việc 1";
             // 
@@ -341,7 +341,6 @@
             this.Controls.Add(this.flpListSubTask);
             this.Controls.Add(this.pnlVien);
             this.Controls.Add(this.pnlTasks);
-            this.Font = new System.Drawing.Font("Calibri Light", 8.25F);
             this.MinimumSize = new System.Drawing.Size(1100, 55);
             this.Name = "urcTaskList";
             this.Size = new System.Drawing.Size(1100, 55);

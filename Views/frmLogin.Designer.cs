@@ -50,11 +50,11 @@
             // 
             this.txtUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserName.Font = new System.Drawing.Font("Calibri Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.Black;
             this.txtUserName.Location = new System.Drawing.Point(85, 255);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(300, 26);
+            this.txtUserName.Size = new System.Drawing.Size(300, 22);
             this.txtUserName.TabIndex = 0;
             this.txtUserName.Text = "Username";
             this.txtUserName.Enter += new System.EventHandler(this.txtUserName_Enter);
@@ -85,7 +85,7 @@
             // 
             this.btnSignin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btnSignin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignin.Font = new System.Drawing.Font("Calibri Light", 15.75F);
+            this.btnSignin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.btnSignin.Location = new System.Drawing.Point(65, 425);
             this.btnSignin.Name = "btnSignin";
@@ -99,7 +99,7 @@
             // 
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Font = new System.Drawing.Font("Calibri Light", 15.75F);
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
             this.btnRegister.Location = new System.Drawing.Point(65, 500);
             this.btnRegister.Name = "btnRegister";
@@ -112,12 +112,12 @@
             // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Calibri Light", 15.75F);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.Location = new System.Drawing.Point(85, 322);
             this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(300, 26);
+            this.txtPassword.Size = new System.Drawing.Size(300, 22);
             this.txtPassword.TabIndex = 0;
             this.txtPassword.Text = "Password";
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
@@ -191,7 +191,6 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtUserName);
-            this.Font = new System.Drawing.Font("Calibri Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";

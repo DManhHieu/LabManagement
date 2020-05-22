@@ -52,24 +52,24 @@
             // 
             this.lblPosition.AutoSize = true;
             this.lblPosition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPosition.Font = new System.Drawing.Font("Calibri Light", 9.75F);
+            this.lblPosition.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosition.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(112)))), ((int)(((byte)(99)))));
             this.lblPosition.Location = new System.Drawing.Point(4, 36);
             this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(50, 15);
+            this.lblPosition.Size = new System.Drawing.Size(61, 16);
             this.lblPosition.TabIndex = 1;
-            this.lblPosition.Text = "position";
+            this.lblPosition.Text = "Manager";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblName.Font = new System.Drawing.Font("Calibri Light", 12F);
+            this.lblName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(3, 10);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(71, 19);
+            this.lblName.Size = new System.Drawing.Size(137, 20);
             this.lblName.TabIndex = 2;
-            this.lblName.Text = "full name";
+            this.lblName.Text = "Đoàn Mạnh Hiếu";
             this.lblName.Click += new System.EventHandler(this.MemberClick);
             // 
             // panel2
@@ -101,7 +101,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.Controls.Add(this.panel2);
-            this.Font = new System.Drawing.Font("Calibri Light", 8.25F);
             this.Name = "urcMember";
             this.Size = new System.Drawing.Size(275, 300);
             this.pnlTitle.ResumeLayout(false);

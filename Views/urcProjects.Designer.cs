@@ -49,7 +49,7 @@
             // btnNewProject
             // 
             this.btnNewProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewProject.Font = new System.Drawing.Font("Calibri Light", 12F);
+            this.btnNewProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewProject.Location = new System.Drawing.Point(1006, 5);
             this.btnNewProject.Name = "btnNewProject";
             this.btnNewProject.Size = new System.Drawing.Size(150, 40);
@@ -61,10 +61,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 26);
+            this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Project";
             // 
@@ -84,7 +84,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flpListProject);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Calibri Light", 8.25F);
             this.Name = "urcProjects";
             this.Size = new System.Drawing.Size(1159, 646);
             this.panel1.ResumeLayout(false);
