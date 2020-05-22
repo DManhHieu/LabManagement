@@ -98,12 +98,12 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Calibri Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(986, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 21);
+            this.label1.Size = new System.Drawing.Size(71, 19);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Đoàn Mạnh Hiếu";
+            this.label1.Text = "full name";
             // 
             // picClose
             // 
@@ -122,11 +122,11 @@
             this.lblLabInfo.AutoSize = true;
             this.lblLabInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.lblLabInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblLabInfo.Font = new System.Drawing.Font("Cambria", 12F);
+            this.lblLabInfo.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLabInfo.ForeColor = System.Drawing.Color.Black;
             this.lblLabInfo.Location = new System.Drawing.Point(469, 6);
             this.lblLabInfo.Name = "lblLabInfo";
-            this.lblLabInfo.Size = new System.Drawing.Size(241, 19);
+            this.lblLabInfo.Size = new System.Drawing.Size(221, 19);
             this.lblLabInfo.TabIndex = 0;
             this.lblLabInfo.Text = "Lập trình trên windows, nhóm 10";
             this.lblLabInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
