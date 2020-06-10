@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBLabManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="IDEmployee" />
+          </Key>
+          <Property Name="IDEmployee" Type="int" Nullable="false" />
+          <Property Name="IDLAB" Type="int" />
+          <Property Name="UserName" Type="char" MaxLength="50" />
+          <Property Name="EPassword" Type="char" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sex" Type="char" MaxLength="6" />
+          <Property Name="Birthday" Type="date" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CMND" Type="char" MaxLength="20" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="PhoneNumber" Type="char" MaxLength="20" />
+          <Property Name="Email" Type="char" MaxLength="50" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="Position" Type="char" MaxLength="50" />
+          <Property Name="PathAvatar" Type="char" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="EmployeeProject">
+          <Key>
+            <PropertyRef Name="IDEmployee" />
+            <PropertyRef Name="IDProject" />
+          </Key>
+          <Property Name="IDEmployee" Type="int" Nullable="false" />
+          <Property Name="IDProject" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lab">
+          <Key>
+            <PropertyRef Name="IDLab" />
+          </Key>
+          <Property Name="IDLab" Type="int" Nullable="false" />
+          <Property Name="LabName" Type="nvarchar" MaxLength="255" />
+          <Property Name="IDMangager" Type="int" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="IDProject" />
+          </Key>
+          <Property Name="IDProject" Type="int" Nullable="false" />
+          <Property Name="Status" Type="char" MaxLength="15" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="255" />
+          <Property Name="IDManager" Type="int" />
+        </EntityType>
+        <EntityType Name="Salary">
+          <Key>
+            <PropertyRef Name="IDEmployee" />
+            <PropertyRef Name="Month" />
+          </Key>
+          <Property Name="IDEmployee" Type="int" Nullable="false" />
+          <Property Name="Month" Type="date" Nullable="false" />
+          <Property Name="LuongCoBan" Type="int" />
+          <Property Name="Phat" Type="int" />
+          <Property Name="Thuong" Type="int" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="IDTask" />
+          </Key>
+          <Property Name="IDTask" Type="int" Nullable="false" />
+          <Property Name="IDProject" Type="int" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="TaskName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Status" Type="nvarchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="TASK_EMPLOYEE">
+          <Key>
+            <PropertyRef Name="IDEmployee" />
+            <PropertyRef Name="IDTask" />
+          </Key>
+          <Property Name="IDEmployee" Type="int" Nullable="false" />
+          <Property Name="IDTask" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TimeWork">
+          <Key>
+            <PropertyRef Name="IDTimeWork" />
+          </Key>
+          <Property Name="IDTimeWork" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="IDEmployee" Type="int" />
+        </EntityType>
+        <Association Name="FK__Employee__IDLAB__267ABA7A">
+          <End Role="Lab" Type="Self.Lab" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lab">
+              <PropertyRef Name="IDLab" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="IDLAB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmployeeP__IDEmp__32E0915F">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="EmployeeProject" Type="Self.EmployeeProject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IDEmployee" />
+            </Principal>
+            <Dependent Role="EmployeeProject">
+              <PropertyRef Name="IDEmployee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmployeeP__IDPro__33D4B598">
+          <End Role="Project" Type="Self.Project" Multiplicity="1" />
+          <End Role="EmployeeProject" Type="Self.EmployeeProject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project">
+              <PropertyRef Name="IDProject" />
+            </Principal>
+            <Dependent Role="EmployeeProject">
+              <PropertyRef Name="IDProject" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Project__IDManag__29572725">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Project" Type="Self.Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IDEmployee" />
+            </Principal>
+            <Dependent Role="Project">
+              <PropertyRef Name="IDManager" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Salary__IDEmploy__398D8EEE">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IDEmployee" />
+            </Principal>
+            <Dependent Role="Salary">
+              <PropertyRef Name="IDEmployee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Task__IDProject__2C3393D0">
+          <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
+          <End Role="Task" Type="Self.Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project">
+              <PropertyRef Name="IDProject" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="IDProject" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TASK_EMPL__IDEmp__2F10007B">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="TASK_EMPLOYEE" Type="Self.TASK_EMPLOYEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IDEmployee" />
+            </Principal>
+            <Dependent Role="TASK_EMPLOYEE">
+              <PropertyRef Name="IDEmployee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TASK_EMPL__IDTas__300424B4">
+          <End Role="Task" Type="Self.Task" Multiplicity="1" />
+          <End Role="TASK_EMPLOYEE" Type="Self.TASK_EMPLOYEE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Task">
+              <PropertyRef Name="IDTask" />
+            </Principal>
+            <Dependent Role="TASK_EMPLOYEE">
+              <PropertyRef Name="IDTask" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TimeWork__IDEmpl__36B12243">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="TimeWork" Type="Self.TimeWork" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IDEmployee" />
+            </Principal>
+            <Dependent Role="TimeWork">
+              <PropertyRef Name="IDEmployee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBLabManagementModelStoreContainer">
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmployeeProject" EntityType="Self.EmployeeProject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lab" EntityType="Self.Lab" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Salary" EntityType="Self.Salary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Task" EntityType="Self.Task" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TASK_EMPLOYEE" EntityType="Self.TASK_EMPLOYEE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TimeWork" EntityType="Self.TimeWork" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Employee__IDLAB__267ABA7A" Association="Self.FK__Employee__IDLAB__267ABA7A">
+            <End Role="Lab" EntitySet="Lab" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmployeeP__IDEmp__32E0915F" Association="Self.FK__EmployeeP__IDEmp__32E0915F">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="EmployeeProject" EntitySet="EmployeeProject" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmployeeP__IDPro__33D4B598" Association="Self.FK__EmployeeP__IDPro__33D4B598">
+            <End Role="Project" EntitySet="Project" />
+            <End Role="EmployeeProject" EntitySet="EmployeeProject" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Project__IDManag__29572725" Association="Self.FK__Project__IDManag__29572725">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Project" EntitySet="Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Salary__IDEmploy__398D8EEE" Association="Self.FK__Salary__IDEmploy__398D8EEE">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Salary" EntitySet="Salary" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Task__IDProject__2C3393D0" Association="Self.FK__Task__IDProject__2C3393D0">
+            <End Role="Project" EntitySet="Project" />
+            <End Role="Task" EntitySet="Task" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TASK_EMPL__IDEmp__2F10007B" Association="Self.FK__TASK_EMPL__IDEmp__2F10007B">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="TASK_EMPLOYEE" EntitySet="TASK_EMPLOYEE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TASK_EMPL__IDTas__300424B4" Association="Self.FK__TASK_EMPL__IDTas__300424B4">
+            <End Role="Task" EntitySet="Task" />
+            <End Role="TASK_EMPLOYEE" EntitySet="TASK_EMPLOYEE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TimeWork__IDEmpl__36B12243" Association="Self.FK__TimeWork__IDEmpl__36B12243">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="TimeWork" EntitySet="TimeWork" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBLabManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="IDEmployee" />
+          </Key>
+          <Property Name="IDEmployee" Type="Int32" Nullable="false" />
+          <Property Name="IDLAB" Type="Int32" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="EPassword" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="Birthday" Type="DateTime" Precision="0" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CMND" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="PathAvatar" Type="String" MaxLength="255" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Lab" Relationship="Self.FK__Employee__IDLAB__267ABA7A" FromRole="Employee" ToRole="Lab" />
+          <NavigationProperty Name="Projects" Relationship="Self.FK__Project__IDManag__29572725" FromRole="Employee" ToRole="Project" />
+          <NavigationProperty Name="Salaries" Relationship="Self.FK__Salary__IDEmploy__398D8EEE" FromRole="Employee" ToRole="Salary" />
+          <NavigationProperty Name="TimeWorks" Relationship="Self.FK__TimeWork__IDEmpl__36B12243" FromRole="Employee" ToRole="TimeWork" />
+          <NavigationProperty Name="Projects1" Relationship="Self.EmployeeProject" FromRole="Employee" ToRole="Project" />
+          <NavigationProperty Name="Tasks" Relationship="Self.TASK_EMPLOYEE" FromRole="Employee" ToRole="Task" />
+        </EntityType>
+        <EntityType Name="Lab">
+          <Key>
+            <PropertyRef Name="IDLab" />
+          </Key>
+          <Property Name="IDLab" Type="Int32" Nullable="false" />
+          <Property Name="LabName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IDMangager" Type="Int32" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__IDLAB__267ABA7A" FromRole="Lab" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="IDProject" />
+          </Key>
+          <Property Name="IDProject" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IDManager" Type="Int32" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__Project__IDManag__29572725" FromRole="Project" ToRole="Employee" />
+          <NavigationProperty Name="Tasks" Relationship="Self.FK__Task__IDProject__2C3393D0" FromRole="Project" ToRole="Task" />
+          <NavigationProperty Name="Employees" Relationship="Self.EmployeeProject" FromRole="Project" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Salary">
+          <Key>
+            <PropertyRef Name="IDEmployee" />
+            <PropertyRef Name="Month" />
+          </Key>
+          <Property Name="IDEmployee" Type="Int32" Nullable="false" />
+          <Property Name="Month" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LuongCoBan" Type="Int32" />
+          <Property Name="Phat" Type="Int32" />
+          <Property Name="Thuong" Type="Int32" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__Salary__IDEmploy__398D8EEE" FromRole="Salary" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="IDTask" />
+          </Key>
+          <Property Name="IDTask" Type="Int32" Nullable="false" />
+          <Property Name="IDProject" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="TaskName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Project" Relationship="Self.FK__Task__IDProject__2C3393D0" FromRole="Task" ToRole="Project" />
+          <NavigationProperty Name="Employees" Relationship="Self.TASK_EMPLOYEE" FromRole="Task" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="TimeWork">
+          <Key>
+            <PropertyRef Name="IDTimeWork" />
+          </Key>
+          <Property Name="IDTimeWork" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="IDEmployee" Type="Int32" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__TimeWork__IDEmpl__36B12243" FromRole="TimeWork" ToRole="Employee" />
+        </EntityType>
+        <Association Name="FK__Employee__IDLAB__267ABA7A">
+          <End Role="Lab" Type="Self.Lab" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lab">
+              <PropertyRef Name="IDLab" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="IDLAB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Project__IDManag__29572725">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Project" Type="Self.Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IDEmployee" />
+            </Principal>
+            <Dependent Role="Project">
+              <PropertyRef Name="IDManager" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Salary__IDEmploy__398D8EEE">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IDEmployee" />
+            </Principal>
+            <Dependent Role="Salary">
+              <PropertyRef Name="IDEmployee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TimeWork__IDEmpl__36B12243">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="TimeWork" Type="Self.TimeWork" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="IDEmployee" />
+            </Principal>
+            <Dependent Role="TimeWork">
+              <PropertyRef Name="IDEmployee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Task__IDProject__2C3393D0">
+          <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
+          <End Role="Task" Type="Self.Task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project">
+              <PropertyRef Name="IDProject" />
+            </Principal>
+            <Dependent Role="Task">
+              <PropertyRef Name="IDProject" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EmployeeProject">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <End Role="Project" Type="Self.Project" Multiplicity="*" />
+        </Association>
+        <Association Name="TASK_EMPLOYEE">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <End Role="Task" Type="Self.Task" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="DBLabManagementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Labs" EntityType="Self.Lab" />
+          <EntitySet Name="Projects" EntityType="Self.Project" />
+          <EntitySet Name="Salaries" EntityType="Self.Salary" />
+          <EntitySet Name="Tasks" EntityType="Self.Task" />
+          <EntitySet Name="TimeWorks" EntityType="Self.TimeWork" />
+          <AssociationSet Name="FK__Employee__IDLAB__267ABA7A" Association="Self.FK__Employee__IDLAB__267ABA7A">
+            <End Role="Lab" EntitySet="Labs" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Project__IDManag__29572725" Association="Self.FK__Project__IDManag__29572725">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Project" EntitySet="Projects" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Salary__IDEmploy__398D8EEE" Association="Self.FK__Salary__IDEmploy__398D8EEE">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Salary" EntitySet="Salaries" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TimeWork__IDEmpl__36B12243" Association="Self.FK__TimeWork__IDEmpl__36B12243">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="TimeWork" EntitySet="TimeWorks" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Task__IDProject__2C3393D0" Association="Self.FK__Task__IDProject__2C3393D0">
+            <End Role="Project" EntitySet="Projects" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+          <AssociationSet Name="EmployeeProject" Association="Self.EmployeeProject">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Project" EntitySet="Projects" />
+          </AssociationSet>
+          <AssociationSet Name="TASK_EMPLOYEE" Association="Self.TASK_EMPLOYEE">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Task" EntitySet="Tasks" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBLabManagementModelStoreContainer" CdmEntityContainer="DBLabManagementEntities">
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="DBLabManagementModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+                <ScalarProperty Name="IDLAB" ColumnName="IDLAB" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="EPassword" ColumnName="EPassword" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="PathAvatar" ColumnName="PathAvatar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Labs">
+            <EntityTypeMapping TypeName="DBLabManagementModel.Lab">
+              <MappingFragment StoreEntitySet="Lab">
+                <ScalarProperty Name="IDLab" ColumnName="IDLab" />
+                <ScalarProperty Name="LabName" ColumnName="LabName" />
+                <ScalarProperty Name="IDMangager" ColumnName="IDMangager" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="DBLabManagementModel.Project">
+              <MappingFragment StoreEntitySet="Project">
+                <ScalarProperty Name="IDProject" ColumnName="IDProject" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="IDManager" ColumnName="IDManager" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Salaries">
+            <EntityTypeMapping TypeName="DBLabManagementModel.Salary">
+              <MappingFragment StoreEntitySet="Salary">
+                <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="LuongCoBan" ColumnName="LuongCoBan" />
+                <ScalarProperty Name="Phat" ColumnName="Phat" />
+                <ScalarProperty Name="Thuong" ColumnName="Thuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tasks">
+            <EntityTypeMapping TypeName="DBLabManagementModel.Task">
+              <MappingFragment StoreEntitySet="Task">
+                <ScalarProperty Name="IDTask" ColumnName="IDTask" />
+                <ScalarProperty Name="IDProject" ColumnName="IDProject" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TimeWorks">
+            <EntityTypeMapping TypeName="DBLabManagementModel.TimeWork">
+              <MappingFragment StoreEntitySet="TimeWork">
+                <ScalarProperty Name="IDTimeWork" ColumnName="IDTimeWork" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="EmployeeProject" TypeName="DBLabManagementModel.EmployeeProject" StoreEntitySet="EmployeeProject">
+            <EndProperty Name="Employee">
+              <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+            </EndProperty>
+            <EndProperty Name="Project">
+              <ScalarProperty Name="IDProject" ColumnName="IDProject" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="TASK_EMPLOYEE" TypeName="DBLabManagementModel.TASK_EMPLOYEE" StoreEntitySet="TASK_EMPLOYEE">
+            <EndProperty Name="Employee">
+              <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+            </EndProperty>
+            <EndProperty Name="Task">
+              <ScalarProperty Name="IDTask" ColumnName="IDTask" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,80 @@
+CREATE DATABASE DBLabManagement 
+GO
+USE DBLabManagement 
+GO
+CREATE TABLE Lab(
+	IDLab int PRIMARY KEY,
+	LabName NVARCHAR(255) NULL,
+	IDMangager INT NULL,
+	)
+GO
+CREATE TABLE Employee(
+	IDEmployee INT PRIMARY KEY, 
+	IDLAB INT FOREIGN KEY REFERENCES LAB(IDLab),
+	UserName CHAR(50) NULL,
+	EPassword CHAR(50) NULL,
+	FirstName NVARCHAR(255) NULL,
+	Sex CHAR(6) NULL,
+	Birthday DATE,
+	LastName NVARCHAR(255) NULL,
+	CMND CHAR(20) NULL,
+	Description NVARCHAR(MAX) NULL,
+	Address NVARCHAR(255) NULL,
+	PhoneNumber CHAR(20) NULL,
+	Email CHAR(50) NULL,
+	StartDate DATE NULL,
+	Position CHAR(50) NULL,
+	PathAvatar CHAR(255) NULL,
+	)
+
+GO
+CREATE TABLE Project(
+	IDProject INT PRIMARY KEY,
+	Status CHAR(15),
+	StartDate DATETIME,
+	EndDate DATETIME,
+	Description NVARCHAR(MAX),
+	ProjectName NVARCHAR(255),
+	IDManager INT FOREIGN KEY REFERENCES EMPLOYEE(IDEmployee),
+	)
+GO
+CREATE TABLE Task(
+	IDTask INT PRIMARY KEY,
+	IDProject INT FOREIGN KEY REFERENCES PROJECT(IDProject),
+	Description NVARCHAR(MAX),
+	StartDate DATETIME,
+	EndDate DATETIME,
+	TaskName NVARCHAR(255),
+	Status NVARCHAR(15),
+	)
+GO
+CREATE TABLE TASK_EMPLOYEE(
+	IDEmployee INT FOREIGN KEY REFERENCES EMPLOYEE(IDEmployee),
+	IDTask INT FOREIGN KEY REFERENCES TASK(IDTask),
+	PRIMARY KEY (IDEmployee,IDTask)
+	)
+GO
+
+CREATE TABLE EmployeeProject(
+	IDEmployee INT FOREIGN KEY REFERENCES Employee(IDEmployee),
+	IDProject INT FOREIGN KEY REFERENCES Project(IDProject),
+	PRIMARY KEY (IDEmployee,IDProject)
+	)
+
+GO
+
+CREATE TABLE TimeWork(
+	IDTimeWork int Primary key,
+	StartDate DateTIme,
+	EndDate Datetime,
+	IDEmployee int FOREIGN KEY REFERENCES Employee(IDEmployee),
+	)
+GO
+CREATE TABLE Salary(
+	IDEmployee INT FOREIGN KEY REFERENCES Employee(IDEmployee),
+	Month Date,
+	PRIMARY KEY(IDEmployee, Month),
+	LuongCoBan INT,
+	Phat INT,
+	Thuong INT
+	)

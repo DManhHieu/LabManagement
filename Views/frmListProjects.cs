@@ -1,4 +1,4 @@
-﻿using QuanLyThanhVien.Controller;
+﻿using QuanLyThanhVien.Controllers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +24,7 @@ namespace QuanLyThanhVien.Views
         {
             frmInfoProject add = new frmInfoProject();
             add.Text = "Thêm dự án";
-            testcontroller.SetViewForm1(add);
+
         }
     }
 }

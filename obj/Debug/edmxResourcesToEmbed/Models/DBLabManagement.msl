@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBLabManagementModelStoreContainer" CdmEntityContainer="DBLabManagementEntities">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="DBLabManagementModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+          <ScalarProperty Name="IDLAB" ColumnName="IDLAB" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EPassword" ColumnName="EPassword" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="PathAvatar" ColumnName="PathAvatar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Labs">
+      <EntityTypeMapping TypeName="DBLabManagementModel.Lab">
+        <MappingFragment StoreEntitySet="Lab">
+          <ScalarProperty Name="IDLab" ColumnName="IDLab" />
+          <ScalarProperty Name="LabName" ColumnName="LabName" />
+          <ScalarProperty Name="IDMangager" ColumnName="IDMangager" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="DBLabManagementModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="IDProject" ColumnName="IDProject" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="IDManager" ColumnName="IDManager" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salaries">
+      <EntityTypeMapping TypeName="DBLabManagementModel.Salary">
+        <MappingFragment StoreEntitySet="Salary">
+          <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="LuongCoBan" ColumnName="LuongCoBan" />
+          <ScalarProperty Name="Phat" ColumnName="Phat" />
+          <ScalarProperty Name="Thuong" ColumnName="Thuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tasks">
+      <EntityTypeMapping TypeName="DBLabManagementModel.Task">
+        <MappingFragment StoreEntitySet="Task">
+          <ScalarProperty Name="IDTask" ColumnName="IDTask" />
+          <ScalarProperty Name="IDProject" ColumnName="IDProject" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TimeWorks">
+      <EntityTypeMapping TypeName="DBLabManagementModel.TimeWork">
+        <MappingFragment StoreEntitySet="TimeWork">
+          <ScalarProperty Name="IDTimeWork" ColumnName="IDTimeWork" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EmployeeProject" TypeName="DBLabManagementModel.EmployeeProject" StoreEntitySet="EmployeeProject">
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+      </EndProperty>
+      <EndProperty Name="Project">
+        <ScalarProperty Name="IDProject" ColumnName="IDProject" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TASK_EMPLOYEE" TypeName="DBLabManagementModel.TASK_EMPLOYEE" StoreEntitySet="TASK_EMPLOYEE">
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
+      </EndProperty>
+      <EndProperty Name="Task">
+        <ScalarProperty Name="IDTask" ColumnName="IDTask" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyThanhVien.Controller;
+using QuanLyThanhVien.Controllers;
 
 namespace QuanLyThanhVien.Views
 {
@@ -21,7 +21,7 @@ namespace QuanLyThanhVien.Views
         private void showinfo(object sender, EventArgs e)
         {
             frmInfoProject infoProject = new frmInfoProject();
-            testcontroller.SetViewForm1(infoProject);
+
         }
     }
 }

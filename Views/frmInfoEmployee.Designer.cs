@@ -212,6 +212,7 @@
             this.btnDelete.TabIndex = 0;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -312,6 +313,7 @@
             // rtDescription
             // 
             this.rtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtDescription.Location = new System.Drawing.Point(127, 201);
             this.rtDescription.Margin = new System.Windows.Forms.Padding(5);
             this.rtDescription.Name = "rtDescription";

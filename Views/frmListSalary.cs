@@ -25,10 +25,5 @@ namespace QuanLyThanhVien.Views
         {
 
         }
-
-        private void dataLuong_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

@@ -29,29 +29,24 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.flListTasks = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtTaskName = new System.Windows.Forms.TextBox();
+            this.btnAddTask = new System.Windows.Forms.Button();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.dtpTaskEndDate = new System.Windows.Forms.DateTimePicker();
             this.dtpTaskStartDate = new System.Windows.Forms.DateTimePicker();
-            this.flListTasks = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btnAddTask = new System.Windows.Forms.Button();
+            this.txtTaskName = new System.Windows.Forms.TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.lbSearchEmployees = new System.Windows.Forms.ListBox();
             this.txtSearchEmployee = new System.Windows.Forms.TextBox();
-            this.lbEmployees = new System.Windows.Forms.ListBox();
             this.label56 = new System.Windows.Forms.Label();
             this.rtDescription = new System.Windows.Forms.RichTextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -60,14 +55,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.txtProjectName = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,63 +79,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(891, 506);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 477);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(891, 29);
-            this.panel2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(335, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(416, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(497, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Hủy bỏ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel13);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(891, 218);
-            this.panel3.TabIndex = 0;
             // 
             // panel4
             // 
@@ -171,14 +113,22 @@
             this.panel15.Size = new System.Drawing.Size(891, 69);
             this.panel15.TabIndex = 2;
             // 
-            // panel10
+            // panel12
             // 
-            this.panel10.AutoSize = true;
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(891, 0);
-            this.panel10.TabIndex = 1;
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 39);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(891, 30);
+            this.panel12.TabIndex = 3;
+            // 
+            // flListTasks
+            // 
+            this.flListTasks.AutoSize = true;
+            this.flListTasks.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flListTasks.Location = new System.Drawing.Point(0, 39);
+            this.flListTasks.Name = "flListTasks";
+            this.flListTasks.Size = new System.Drawing.Size(891, 0);
+            this.flListTasks.TabIndex = 2;
             // 
             // panel6
             // 
@@ -194,15 +144,17 @@
             this.panel6.Size = new System.Drawing.Size(891, 39);
             this.panel6.TabIndex = 1;
             // 
-            // txtTaskName
+            // btnAddTask
             // 
-            this.txtTaskName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTaskName.Location = new System.Drawing.Point(33, 9);
-            this.txtTaskName.Name = "txtTaskName";
-            this.txtTaskName.Size = new System.Drawing.Size(264, 26);
-            this.txtTaskName.TabIndex = 5;
-            this.txtTaskName.Text = "Thêm công việc";
+            this.btnAddTask.FlatAppearance.BorderSize = 0;
+            this.btnAddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTask.Location = new System.Drawing.Point(5, 7);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(24, 23);
+            this.btnAddTask.TabIndex = 12;
+            this.btnAddTask.Text = "+";
+            this.btnAddTask.UseVisualStyleBackColor = true;
             // 
             // label54
             // 
@@ -244,41 +196,39 @@
             this.dtpTaskStartDate.Size = new System.Drawing.Size(197, 20);
             this.dtpTaskStartDate.TabIndex = 9;
             // 
-            // flListTasks
+            // txtTaskName
             // 
-            this.flListTasks.AutoSize = true;
-            this.flListTasks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flListTasks.Location = new System.Drawing.Point(0, 39);
-            this.flListTasks.Name = "flListTasks";
-            this.flListTasks.Size = new System.Drawing.Size(891, 0);
-            this.flListTasks.TabIndex = 2;
+            this.txtTaskName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTaskName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaskName.Location = new System.Drawing.Point(33, 9);
+            this.txtTaskName.Name = "txtTaskName";
+            this.txtTaskName.Size = new System.Drawing.Size(264, 26);
+            this.txtTaskName.TabIndex = 5;
+            this.txtTaskName.Text = "Thêm công việc";
             // 
-            // panel12
+            // panel10
             // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 39);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(891, 30);
-            this.panel12.TabIndex = 3;
+            this.panel10.AutoSize = true;
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(891, 0);
+            this.panel10.TabIndex = 1;
             // 
-            // btnAddTask
+            // panel3
             // 
-            this.btnAddTask.FlatAppearance.BorderSize = 0;
-            this.btnAddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTask.Location = new System.Drawing.Point(5, 7);
-            this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(24, 23);
-            this.btnAddTask.TabIndex = 12;
-            this.btnAddTask.Text = "+";
-            this.btnAddTask.UseVisualStyleBackColor = true;
+            this.panel3.Controls.Add(this.panel13);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(891, 218);
+            this.panel3.TabIndex = 0;
             // 
             // panel13
             // 
             this.panel13.Controls.Add(this.cbStatus);
             this.panel13.Controls.Add(this.lbSearchEmployees);
             this.panel13.Controls.Add(this.txtSearchEmployee);
-            this.panel13.Controls.Add(this.lbEmployees);
             this.panel13.Controls.Add(this.label56);
             this.panel13.Controls.Add(this.rtDescription);
             this.panel13.Controls.Add(this.progressBar1);
@@ -313,7 +263,7 @@
             this.lbSearchEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSearchEmployees.FormattingEnabled = true;
             this.lbSearchEmployees.ItemHeight = 20;
-            this.lbSearchEmployees.Location = new System.Drawing.Point(423, 114);
+            this.lbSearchEmployees.Location = new System.Drawing.Point(423, 120);
             this.lbSearchEmployees.Name = "lbSearchEmployees";
             this.lbSearchEmployees.Size = new System.Drawing.Size(200, 82);
             this.lbSearchEmployees.TabIndex = 40;
@@ -329,24 +279,12 @@
             this.txtSearchEmployee.TabIndex = 39;
             this.txtSearchEmployee.Text = "Tìm kiếm";
             // 
-            // lbEmployees
-            // 
-            this.lbEmployees.BackColor = System.Drawing.SystemColors.Control;
-            this.lbEmployees.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmployees.FormattingEnabled = true;
-            this.lbEmployees.ItemHeight = 20;
-            this.lbEmployees.Location = new System.Drawing.Point(330, 118);
-            this.lbEmployees.Name = "lbEmployees";
-            this.lbEmployees.Size = new System.Drawing.Size(293, 80);
-            this.lbEmployees.TabIndex = 38;
-            // 
             // label56
             // 
             this.label56.AutoSize = true;
             this.label56.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(326, 86);
+            this.label56.Location = new System.Drawing.Point(328, 92);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(89, 20);
             this.label56.TabIndex = 37;
@@ -423,6 +361,54 @@
             this.txtProjectName.TabIndex = 30;
             this.txtProjectName.Text = "Tên dự án";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 477);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(891, 29);
+            this.panel2.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(497, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Hủy bỏ";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(416, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Xóa";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(335, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Lưu";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmInfoProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,8 +421,6 @@
             this.Text = "frmInfoProject";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -445,8 +429,10 @@
             this.panel15.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -476,7 +462,6 @@
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.ListBox lbSearchEmployees;
         private System.Windows.Forms.TextBox txtSearchEmployee;
-        private System.Windows.Forms.ListBox lbEmployees;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.RichTextBox rtDescription;
         private System.Windows.Forms.ProgressBar progressBar1;

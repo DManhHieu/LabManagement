@@ -1,4 +1,4 @@
-﻿using QuanLyThanhVien.Controller;
+﻿using QuanLyThanhVien.Controllers;
 using QuanLyThanhVien.Models;
 using System;
 using System.Collections.Generic;
@@ -14,29 +14,31 @@ namespace QuanLyThanhVien.Views
 {
     public partial class frmEmployees : Form
     {
-        private List<Employee> Employees;
+       
         public frmEmployees()    
         {
             InitializeComponent();
             EmployeeController.frmEmployees = this;
-           
+            EmployeeController.LoadList();
            
         }
         private void btnAddNewEmployee_Click(object sender, EventArgs e)
         {
-            frmInfoEmployee employee = new frmInfoEmployee(null);
-            employee.Text = "Thêm thành viên";
-            testcontroller.SetViewForm1(employee);
+            frmInfoEmployee employee = new frmInfoEmployee(-1);
+            employee.Text = "Thêm nhân viên";
+            mainController.SetView(employee);
         }
 
         private void frmEmployees_Load(object sender, EventArgs e)
         {
-            EmployeeController.LoadList();
+         
 
         }
-        public void AddViewEmployees(Employee employee)
+        public void AddEmployee(Employee _employee)
         {
-            this.flpEmployees.Controls.Add(new urcEmployee(employee));
+            urcEmployee employee = new urcEmployee(_employee.IDEmployee);
+            this.flpEmployees.Controls.Add(employee);
         }
+       
     }
 }

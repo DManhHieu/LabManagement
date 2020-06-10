@@ -1,4 +1,4 @@
-﻿using QuanLyThanhVien.Controller;
+﻿using QuanLyThanhVien.Controllers;
 using QuanLyThanhVien.Models;
 using System;
 using System.Collections.Generic;
@@ -15,18 +15,11 @@ namespace QuanLyThanhVien.Views
     public partial class frmMain : Form
     {
         private List<Form> activity = new List<Form> { };
-        private List<Employee> employees;
         public frmMain()
         {
             InitializeComponent();
-            testcontroller.Form1 = this;
-            employees = new List<Employee> { };
-            Employee employee = new Employee { MaNhanVien = "ABC", FirstName = "Đoàn", LastName = "Hiếu", BirthDay = DateTime.Now };
-            employees.Add(employee);
-            Employee employee1 = new Employee { MaNhanVien = "XYZ", FirstName = "Hoàng", LastName = "Dương Hùng ", BirthDay = DateTime.Now };
-            employees.Add(employee1);
-            EmployeeController.employees = employees;
 
+            mainController._main = this;
         }
         private void ResetMenu()
         {
@@ -95,13 +88,9 @@ namespace QuanLyThanhVien.Views
             }
             ResetMenu();
             this.pnlRimEmployees.BackColor = Color.Blue;
-           
-           
-
             frmEmployees thanhvien = new frmEmployees();
             thanhvien.Text = "Danh sách nhân viên";
             SetView(thanhvien);
-            //activition.Add(thanhvien);
         }
         
         private void btnSalary_Click(object sender, EventArgs e)
@@ -145,6 +134,23 @@ namespace QuanLyThanhVien.Views
             frmListProjects listProjects = new frmListProjects();
             listProjects.Text = "Các dự án";
             SetView(listProjects);
+        }
+        public static Employee _employee;
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
+            if (!LoginController.IsLogin)
+            {
+                this.Close();
+                return;
+            }
+            this.lblControl.Text = "Xin chào " + _employee.FirstName + " " + _employee.LastName;
+            //this.lblLabName.Text = _employee.LAB.LabName; Không sử dụng như thế này được ? 
+
+            this.lblLabName.Text = mainController.LabName(_employee);
+
         }
     }
 }

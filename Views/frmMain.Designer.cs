@@ -34,6 +34,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblControl = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.lblLabName = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnDashBoard = new System.Windows.Forms.Button();
             this.pnlRimDashBoard = new System.Windows.Forms.Panel();
@@ -104,6 +105,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlMenu.Controls.Add(this.lblLabName);
             this.pnlMenu.Controls.Add(this.panel4);
             this.pnlMenu.Controls.Add(this.pnlMenuProject);
             this.pnlMenu.Controls.Add(this.pnlMenuTime);
@@ -116,11 +118,22 @@
             this.pnlMenu.Size = new System.Drawing.Size(170, 575);
             this.pnlMenu.TabIndex = 0;
             // 
+            // lblLabName
+            // 
+            this.lblLabName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLabName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLabName.Location = new System.Drawing.Point(41, 9);
+            this.lblLabName.Name = "lblLabName";
+            this.lblLabName.Size = new System.Drawing.Size(129, 100);
+            this.lblLabName.TabIndex = 7;
+            this.lblLabName.Text = "Xin chào :)) ";
+            this.lblLabName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.btnDashBoard);
             this.panel4.Controls.Add(this.pnlRimDashBoard);
-            this.panel4.Location = new System.Drawing.Point(0, 121);
+            this.panel4.Location = new System.Drawing.Point(0, 183);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(170, 40);
             this.panel4.TabIndex = 6;
@@ -154,7 +167,7 @@
             // 
             this.pnlMenuProject.Controls.Add(this.btnProject);
             this.pnlMenuProject.Controls.Add(this.pnlRimProject);
-            this.pnlMenuProject.Location = new System.Drawing.Point(0, 259);
+            this.pnlMenuProject.Location = new System.Drawing.Point(0, 321);
             this.pnlMenuProject.Name = "pnlMenuProject";
             this.pnlMenuProject.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuProject.TabIndex = 5;
@@ -189,7 +202,7 @@
             // 
             this.pnlMenuTime.Controls.Add(this.btnTime);
             this.pnlMenuTime.Controls.Add(this.pnlRimTime);
-            this.pnlMenuTime.Location = new System.Drawing.Point(0, 213);
+            this.pnlMenuTime.Location = new System.Drawing.Point(0, 275);
             this.pnlMenuTime.Name = "pnlMenuTime";
             this.pnlMenuTime.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuTime.TabIndex = 4;
@@ -224,7 +237,7 @@
             // 
             this.pnlMenuSalary.Controls.Add(this.btnSalary);
             this.pnlMenuSalary.Controls.Add(this.pnlRimSalary);
-            this.pnlMenuSalary.Location = new System.Drawing.Point(0, 305);
+            this.pnlMenuSalary.Location = new System.Drawing.Point(0, 367);
             this.pnlMenuSalary.Name = "pnlMenuSalary";
             this.pnlMenuSalary.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuSalary.TabIndex = 3;
@@ -260,7 +273,7 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(3, 50);
+            this.button4.Location = new System.Drawing.Point(3, 112);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(38, 42);
             this.button4.TabIndex = 2;
@@ -271,7 +284,7 @@
             // 
             this.pnlMenuEmployee.Controls.Add(this.btnEmployees);
             this.pnlMenuEmployee.Controls.Add(this.pnlRimEmployees);
-            this.pnlMenuEmployee.Location = new System.Drawing.Point(0, 167);
+            this.pnlMenuEmployee.Location = new System.Drawing.Point(0, 229);
             this.pnlMenuEmployee.Name = "pnlMenuEmployee";
             this.pnlMenuEmployee.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuEmployee.TabIndex = 0;
@@ -288,7 +301,7 @@
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(167, 40);
             this.btnEmployees.TabIndex = 1;
-            this.btnEmployees.Text = "Nhân viên";
+            this.btnEmployees.Text = " Nhân viên";
             this.btnEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmployees.UseVisualStyleBackColor = true;
@@ -312,6 +325,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.Opacity = 0.97D;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -348,6 +362,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnDashBoard;
         private System.Windows.Forms.Panel pnlRimDashBoard;
+        private System.Windows.Forms.Label lblLabName;
     }
 }
 

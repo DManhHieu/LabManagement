@@ -61,7 +61,6 @@
             this.dataSalary.Name = "dataSalary";
             this.dataSalary.Size = new System.Drawing.Size(907, 525);
             this.dataSalary.TabIndex = 2;
-            this.dataSalary.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLuong_CellContentClick);
             // 
             // cMaNhanVien
             // 

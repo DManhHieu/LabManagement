@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,9 +55,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\EmployeeController.cs" />
-    <Compile Include="Controller\testcontroller.cs" />
-    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\mainController.cs" />
+    <Compile Include="Models\DBLabManagement.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLabManagement.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBLabManagement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLabManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBLabManagement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBLabManagement.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>DBLabManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lab.cs">
+      <DependentUpon>DBLabManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Project.cs">
+      <DependentUpon>DBLabManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Salary.cs">
+      <DependentUpon>DBLabManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Task.cs">
+      <DependentUpon>DBLabManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TimeWork.cs">
+      <DependentUpon>DBLabManagement.tt</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmListSalary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +114,12 @@
     </Compile>
     <Compile Include="Views\frmListProjects.Designer.cs">
       <DependentUpon>frmListProjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmMain.cs">
       <SubType>Form</SubType>
@@ -153,6 +201,9 @@
     <EmbeddedResource Include="Views\frmListProjects.resx">
       <DependentUpon>frmListProjects.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +247,14 @@
     <EmbeddedResource Include="Views\urcWorkTime.resx">
       <DependentUpon>urcWorkTime.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\DBLabManagement.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBLabManagement.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\DBLabManagement.edmx.diagram">
+      <DependentUpon>DBLabManagement.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -214,6 +273,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\baseline_add_photo_alternate_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\DBLabManagement.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBLabManagement.edmx</DependentUpon>
+      <LastGenOutput>DBLabManagement.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\DBLabManagement.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBLabManagement.edmx</DependentUpon>
+      <LastGenOutput>DBLabManagement.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
