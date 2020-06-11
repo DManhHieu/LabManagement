@@ -38,19 +38,20 @@
             this.lbEmployees = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtDescription = new System.Windows.Forms.RichTextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.txtTaskName = new System.Windows.Forms.TextBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.cbComplete = new System.Windows.Forms.CheckBox();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.btnCancel);
             this.panel3.Controls.Add(this.btnDelete);
@@ -60,14 +61,14 @@
             this.panel3.Controls.Add(this.lbEmployees);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.richTextBox1);
+            this.panel3.Controls.Add(this.rtDescription);
             this.panel3.Controls.Add(this.label56);
             this.panel3.Controls.Add(this.label54);
             this.panel3.Controls.Add(this.label55);
             this.panel3.Controls.Add(this.dtpEndDate);
             this.panel3.Controls.Add(this.dtpStartDate);
             this.panel3.Controls.Add(this.txtTaskName);
-            this.panel3.Controls.Add(this.checkBox11);
+            this.panel3.Controls.Add(this.cbComplete);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -166,13 +167,13 @@
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // rtDescription
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(11, 184);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(258, 96);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "Description";
+            this.rtDescription.Location = new System.Drawing.Point(11, 184);
+            this.rtDescription.Name = "rtDescription";
+            this.rtDescription.Size = new System.Drawing.Size(258, 96);
+            this.rtDescription.TabIndex = 8;
+            this.rtDescription.Text = "Description";
             // 
             // label56
             // 
@@ -232,14 +233,14 @@
             this.txtTaskName.TabIndex = 3;
             this.txtTaskName.Text = "Task name";
             // 
-            // checkBox11
+            // cbComplete
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(8, 18);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(15, 14);
-            this.checkBox11.TabIndex = 2;
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.cbComplete.AutoSize = true;
+            this.cbComplete.Location = new System.Drawing.Point(8, 18);
+            this.cbComplete.Name = "cbComplete";
+            this.cbComplete.Size = new System.Drawing.Size(15, 14);
+            this.cbComplete.TabIndex = 2;
+            this.cbComplete.UseVisualStyleBackColor = true;
             // 
             // frmInfoTask
             // 
@@ -266,14 +267,14 @@
         private System.Windows.Forms.ListBox lbEmployees;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtDescription;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.TextBox txtTaskName;
-        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox cbComplete;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;

@@ -98,7 +98,7 @@
             // bntLogin
             // 
             this.bntLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntLogin.Location = new System.Drawing.Point(44, 429);
+            this.bntLogin.Location = new System.Drawing.Point(133, 342);
             this.bntLogin.Name = "bntLogin";
             this.bntLogin.Size = new System.Drawing.Size(110, 40);
             this.bntLogin.TabIndex = 6;
@@ -120,10 +120,11 @@
             // 
             // button3
             // 
+            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(216, 429);
+            this.button3.Location = new System.Drawing.Point(220, 283);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 42);
+            this.button3.Size = new System.Drawing.Size(109, 29);
             this.button3.TabIndex = 6;
             this.button3.Text = "Đăng ký";
             this.button3.UseVisualStyleBackColor = true;

@@ -35,6 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblProjectName = new System.Windows.Forms.Label();
             this.lblTaskName = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbComplete
@@ -46,11 +47,12 @@
             this.cbComplete.Size = new System.Drawing.Size(12, 11);
             this.cbComplete.TabIndex = 11;
             this.cbComplete.UseVisualStyleBackColor = true;
+            this.cbComplete.CheckedChanged += new System.EventHandler(this.cbComplete_CheckedChanged);
             // 
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(435, 39);
+            this.lblEndDate.Location = new System.Drawing.Point(475, 39);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(53, 13);
             this.lblEndDate.TabIndex = 9;
@@ -68,7 +70,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(379, 39);
+            this.label6.Location = new System.Drawing.Point(419, 39);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 7;
@@ -102,11 +104,24 @@
             this.lblTaskName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblTaskName.Click += new System.EventHandler(this.InfoTask);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.AutoSize = true;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Location = new System.Drawing.Point(614, 31);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(24, 23);
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "X";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // urcTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cbComplete);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblStartDate);
@@ -131,5 +146,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblProjectName;
         private System.Windows.Forms.Label lblTaskName;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

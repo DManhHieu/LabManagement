@@ -84,8 +84,8 @@ namespace QuanLyThanhVien.Views
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            frmListTask task = new frmListTask();
-
+            frmListTask task = new frmListTask(_ID);
+            mainController.SetView(task);
         }
     }
 }

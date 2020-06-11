@@ -126,6 +126,7 @@
             this.label53.Size = new System.Drawing.Size(56, 13);
             this.label53.TabIndex = 3;
             this.label53.Text = "End date :";
+            this.label53.Visible = false;
             // 
             // label52
             // 
@@ -135,6 +136,7 @@
             this.label52.Size = new System.Drawing.Size(62, 13);
             this.label52.TabIndex = 3;
             this.label52.Text = "Start date : ";
+            this.label52.Visible = false;
             // 
             // dtpEndDateNewTask
             // 
@@ -144,6 +146,7 @@
             this.dtpEndDateNewTask.Name = "dtpEndDateNewTask";
             this.dtpEndDateNewTask.Size = new System.Drawing.Size(197, 20);
             this.dtpEndDateNewTask.TabIndex = 2;
+            this.dtpEndDateNewTask.Visible = false;
             // 
             // dtpStartDateNewTask
             // 
@@ -153,6 +156,7 @@
             this.dtpStartDateNewTask.Name = "dtpStartDateNewTask";
             this.dtpStartDateNewTask.Size = new System.Drawing.Size(197, 20);
             this.dtpStartDateNewTask.TabIndex = 2;
+            this.dtpStartDateNewTask.Visible = false;
             // 
             // txtNameNewTask
             // 
@@ -161,6 +165,8 @@
             this.txtNameNewTask.Size = new System.Drawing.Size(317, 20);
             this.txtNameNewTask.TabIndex = 1;
             this.txtNameNewTask.Text = "Add new task";
+            this.txtNameNewTask.Enter += new System.EventHandler(this.txtNameNewTask_Enter);
+            this.txtNameNewTask.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNameNewTask_KeyPress);
             // 
             // cbNewTask
             // 
@@ -170,6 +176,7 @@
             this.cbNewTask.Size = new System.Drawing.Size(15, 14);
             this.cbNewTask.TabIndex = 0;
             this.cbNewTask.UseVisualStyleBackColor = true;
+            this.cbNewTask.Visible = false;
             // 
             // panel4
             // 
@@ -221,6 +228,7 @@
             this.label50.Size = new System.Drawing.Size(67, 13);
             this.label50.TabIndex = 0;
             this.label50.Text = "Hoàn Thành";
+            this.label50.Click += new System.EventHandler(this.label50_Click);
             // 
             // panel10
             // 

@@ -27,10 +27,6 @@ namespace QuanLyThanhVien.Views
             this.Close();
         }
 
-        private void panel9_Click(object sender, EventArgs e)
-        {
-            frmInfoTask infoTask = new frmInfoTask();
-            infoTask.ShowDialog();
-        }
+
     }
 }
