@@ -22,7 +22,7 @@ namespace QuanLyThanhVien.Models
         public virtual Employee Employee { get; set; }
         public override string ToString()
         {
-            return StartDate.Value.ToShortTimeString() + "-" + EndDate.Value.ToShortTimeString();
+            return StartDate.Value.ToString("hh:mm") + "-" + EndDate.Value.ToString("hh:mm");
         }
     }
 }

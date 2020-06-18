@@ -21,7 +21,7 @@ namespace QuanLyThanhVien.Models
         public Nullable<int> Thuong { get; set; }
         public string UserName { get; set; }
         public Nullable<int> LuongDaNhan { get; set; }
-        
+    
         public virtual Employee Employee { get; set; }
     }
 }

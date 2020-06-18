@@ -36,7 +36,6 @@
             this.dtpEndTimeNew = new System.Windows.Forms.DateTimePicker();
             this.dtpStartTimeNew = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,33 +118,19 @@
             this.label15.TabIndex = 3;
             this.label15.Text = "To :";
             // 
-            // btnClose
-            // 
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(269, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(24, 23);
-            this.btnClose.TabIndex = 7;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // frmSetTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 317);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.flpListTimeWork);
             this.Controls.Add(this.lblNameEmployee);
             this.Controls.Add(this.dtpDay);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmSetTime";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmSetTime";
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);
@@ -162,7 +147,6 @@
         private System.Windows.Forms.DateTimePicker dtpEndTimeNew;
         private System.Windows.Forms.DateTimePicker dtpStartTimeNew;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAdd;
     }
 }

@@ -32,6 +32,10 @@ namespace QuanLyThanhVien.Views
             }
             else
             {
+                if (_employee == null)
+                {
+                    _employee = new Employee();
+                }
                 _employee.IDEmployee = -1;
                 Password = "0000";
             }
