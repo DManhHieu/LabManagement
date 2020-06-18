@@ -37,24 +37,24 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblLabName = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnDashBoard = new System.Windows.Forms.Button();
             this.pnlRimDashBoard = new System.Windows.Forms.Panel();
             this.pnlMenuProject = new System.Windows.Forms.Panel();
-            this.btnProject = new System.Windows.Forms.Button();
             this.pnlRimProject = new System.Windows.Forms.Panel();
             this.pnlMenuTime = new System.Windows.Forms.Panel();
-            this.btnTime = new System.Windows.Forms.Button();
             this.pnlRimTime = new System.Windows.Forms.Panel();
             this.pnlMenuSalary = new System.Windows.Forms.Panel();
-            this.btnSalary = new System.Windows.Forms.Button();
             this.pnlRimSalary = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.pnlMenuEmployee = new System.Windows.Forms.Panel();
-            this.btnEmployees = new System.Windows.Forms.Button();
-            this.pnlRimEmployees = new System.Windows.Forms.Panel();
             this.pnlProfile = new System.Windows.Forms.Panel();
-            this.btnProfile = new System.Windows.Forms.Button();
             this.pnlRimProfile = new System.Windows.Forms.Panel();
+            this.pnlMenuEmployee = new System.Windows.Forms.Panel();
+            this.pnlRimEmployees = new System.Windows.Forms.Panel();
+            this.btnDashBoard = new System.Windows.Forms.Button();
+            this.btnProject = new System.Windows.Forms.Button();
+            this.btnTime = new System.Windows.Forms.Button();
+            this.btnSalary = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.btnEmployees = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlMenu.SuspendLayout();
@@ -62,8 +62,8 @@
             this.pnlMenuProject.SuspendLayout();
             this.pnlMenuTime.SuspendLayout();
             this.pnlMenuSalary.SuspendLayout();
-            this.pnlMenuEmployee.SuspendLayout();
             this.pnlProfile.SuspendLayout();
+            this.pnlMenuEmployee.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,23 +157,6 @@
             this.panel4.Size = new System.Drawing.Size(170, 40);
             this.panel4.TabIndex = 6;
             // 
-            // btnDashBoard
-            // 
-            this.btnDashBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDashBoard.FlatAppearance.BorderSize = 0;
-            this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashBoard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashBoard.Image")));
-            this.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashBoard.Location = new System.Drawing.Point(3, 0);
-            this.btnDashBoard.Name = "btnDashBoard";
-            this.btnDashBoard.Size = new System.Drawing.Size(167, 40);
-            this.btnDashBoard.TabIndex = 1;
-            this.btnDashBoard.Text = " Dashboard";
-            this.btnDashBoard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashBoard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDashBoard.UseVisualStyleBackColor = true;
-            // 
             // pnlRimDashBoard
             // 
             this.pnlRimDashBoard.Dock = System.Windows.Forms.DockStyle.Left;
@@ -190,24 +173,6 @@
             this.pnlMenuProject.Name = "pnlMenuProject";
             this.pnlMenuProject.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuProject.TabIndex = 5;
-            // 
-            // btnProject
-            // 
-            this.btnProject.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnProject.FlatAppearance.BorderSize = 0;
-            this.btnProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProject.Image = ((System.Drawing.Image)(resources.GetObject("btnProject.Image")));
-            this.btnProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProject.Location = new System.Drawing.Point(3, 0);
-            this.btnProject.Name = "btnProject";
-            this.btnProject.Size = new System.Drawing.Size(167, 40);
-            this.btnProject.TabIndex = 2;
-            this.btnProject.Text = " Project";
-            this.btnProject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProject.UseVisualStyleBackColor = true;
-            this.btnProject.Click += new System.EventHandler(this.btnProject_Click);
             // 
             // pnlRimProject
             // 
@@ -226,24 +191,6 @@
             this.pnlMenuTime.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuTime.TabIndex = 4;
             // 
-            // btnTime
-            // 
-            this.btnTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnTime.FlatAppearance.BorderSize = 0;
-            this.btnTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTime.Image = ((System.Drawing.Image)(resources.GetObject("btnTime.Image")));
-            this.btnTime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTime.Location = new System.Drawing.Point(3, 0);
-            this.btnTime.Name = "btnTime";
-            this.btnTime.Size = new System.Drawing.Size(167, 40);
-            this.btnTime.TabIndex = 1;
-            this.btnTime.Text = "Thời gian làm việc";
-            this.btnTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTime.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTime.UseVisualStyleBackColor = true;
-            this.btnTime.Click += new System.EventHandler(this.btnTime_Click);
-            // 
             // pnlRimTime
             // 
             this.pnlRimTime.Dock = System.Windows.Forms.DockStyle.Left;
@@ -261,13 +208,108 @@
             this.pnlMenuSalary.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuSalary.TabIndex = 3;
             // 
+            // pnlRimSalary
+            // 
+            this.pnlRimSalary.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlRimSalary.Location = new System.Drawing.Point(0, 0);
+            this.pnlRimSalary.Name = "pnlRimSalary";
+            this.pnlRimSalary.Size = new System.Drawing.Size(3, 40);
+            this.pnlRimSalary.TabIndex = 0;
+            // 
+            // pnlProfile
+            // 
+            this.pnlProfile.Controls.Add(this.btnProfile);
+            this.pnlProfile.Controls.Add(this.pnlRimProfile);
+            this.pnlProfile.Location = new System.Drawing.Point(0, 229);
+            this.pnlProfile.Name = "pnlProfile";
+            this.pnlProfile.Size = new System.Drawing.Size(170, 40);
+            this.pnlProfile.TabIndex = 0;
+            // 
+            // pnlRimProfile
+            // 
+            this.pnlRimProfile.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlRimProfile.Location = new System.Drawing.Point(0, 0);
+            this.pnlRimProfile.Name = "pnlRimProfile";
+            this.pnlRimProfile.Size = new System.Drawing.Size(3, 40);
+            this.pnlRimProfile.TabIndex = 0;
+            // 
+            // pnlMenuEmployee
+            // 
+            this.pnlMenuEmployee.Controls.Add(this.btnEmployees);
+            this.pnlMenuEmployee.Controls.Add(this.pnlRimEmployees);
+            this.pnlMenuEmployee.Location = new System.Drawing.Point(0, 268);
+            this.pnlMenuEmployee.Name = "pnlMenuEmployee";
+            this.pnlMenuEmployee.Size = new System.Drawing.Size(170, 40);
+            this.pnlMenuEmployee.TabIndex = 0;
+            // 
+            // pnlRimEmployees
+            // 
+            this.pnlRimEmployees.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlRimEmployees.Location = new System.Drawing.Point(0, 0);
+            this.pnlRimEmployees.Name = "pnlRimEmployees";
+            this.pnlRimEmployees.Size = new System.Drawing.Size(3, 40);
+            this.pnlRimEmployees.TabIndex = 0;
+            // 
+            // btnDashBoard
+            // 
+            this.btnDashBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDashBoard.FlatAppearance.BorderSize = 0;
+            this.btnDashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashBoard.Image = global::QuanLyThanhVien.Properties.Resources.dashboard;
+            this.btnDashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashBoard.Location = new System.Drawing.Point(3, 0);
+            this.btnDashBoard.Name = "btnDashBoard";
+            this.btnDashBoard.Size = new System.Drawing.Size(167, 40);
+            this.btnDashBoard.TabIndex = 1;
+            this.btnDashBoard.Text = " Dashboard";
+            this.btnDashBoard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashBoard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashBoard.UseVisualStyleBackColor = true;
+            // 
+            // btnProject
+            // 
+            this.btnProject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnProject.FlatAppearance.BorderSize = 0;
+            this.btnProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProject.Image = global::QuanLyThanhVien.Properties.Resources.mywork;
+            this.btnProject.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProject.Location = new System.Drawing.Point(3, 0);
+            this.btnProject.Name = "btnProject";
+            this.btnProject.Size = new System.Drawing.Size(167, 40);
+            this.btnProject.TabIndex = 2;
+            this.btnProject.Text = " Project";
+            this.btnProject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProject.UseVisualStyleBackColor = true;
+            this.btnProject.Click += new System.EventHandler(this.btnProject_Click);
+            // 
+            // btnTime
+            // 
+            this.btnTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnTime.FlatAppearance.BorderSize = 0;
+            this.btnTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTime.Image = global::QuanLyThanhVien.Properties.Resources.time;
+            this.btnTime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTime.Location = new System.Drawing.Point(3, 0);
+            this.btnTime.Name = "btnTime";
+            this.btnTime.Size = new System.Drawing.Size(167, 40);
+            this.btnTime.TabIndex = 1;
+            this.btnTime.Text = "Thời gian làm việc";
+            this.btnTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTime.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTime.UseVisualStyleBackColor = true;
+            this.btnTime.Click += new System.EventHandler(this.btnTime_Click);
+            // 
             // btnSalary
             // 
             this.btnSalary.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSalary.FlatAppearance.BorderSize = 0;
             this.btnSalary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalary.Image = ((System.Drawing.Image)(resources.GetObject("btnSalary.Image")));
+            this.btnSalary.Image = global::QuanLyThanhVien.Properties.Resources.finace;
             this.btnSalary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalary.Location = new System.Drawing.Point(3, 0);
             this.btnSalary.Name = "btnSalary";
@@ -278,14 +320,6 @@
             this.btnSalary.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalary.UseVisualStyleBackColor = true;
             this.btnSalary.Click += new System.EventHandler(this.btnSalary_Click);
-            // 
-            // pnlRimSalary
-            // 
-            this.pnlRimSalary.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlRimSalary.Location = new System.Drawing.Point(0, 0);
-            this.pnlRimSalary.Name = "pnlRimSalary";
-            this.pnlRimSalary.Size = new System.Drawing.Size(3, 40);
-            this.pnlRimSalary.TabIndex = 0;
             // 
             // button4
             // 
@@ -299,57 +333,13 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // pnlMenuEmployee
-            // 
-            this.pnlMenuEmployee.Controls.Add(this.btnEmployees);
-            this.pnlMenuEmployee.Controls.Add(this.pnlRimEmployees);
-            this.pnlMenuEmployee.Location = new System.Drawing.Point(0, 268);
-            this.pnlMenuEmployee.Name = "pnlMenuEmployee";
-            this.pnlMenuEmployee.Size = new System.Drawing.Size(170, 40);
-            this.pnlMenuEmployee.TabIndex = 0;
-            // 
-            // btnEmployees
-            // 
-            this.btnEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnEmployees.FlatAppearance.BorderSize = 0;
-            this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmployees.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployees.Image")));
-            this.btnEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployees.Location = new System.Drawing.Point(3, 0);
-            this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(167, 40);
-            this.btnEmployees.TabIndex = 1;
-            this.btnEmployees.Text = " Nhân viên";
-            this.btnEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEmployees.UseVisualStyleBackColor = true;
-            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
-            // 
-            // pnlRimEmployees
-            // 
-            this.pnlRimEmployees.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlRimEmployees.Location = new System.Drawing.Point(0, 0);
-            this.pnlRimEmployees.Name = "pnlRimEmployees";
-            this.pnlRimEmployees.Size = new System.Drawing.Size(3, 40);
-            this.pnlRimEmployees.TabIndex = 0;
-            // 
-            // pnlProfile
-            // 
-            this.pnlProfile.Controls.Add(this.btnProfile);
-            this.pnlProfile.Controls.Add(this.pnlRimProfile);
-            this.pnlProfile.Location = new System.Drawing.Point(0, 229);
-            this.pnlProfile.Name = "pnlProfile";
-            this.pnlProfile.Size = new System.Drawing.Size(170, 40);
-            this.pnlProfile.TabIndex = 0;
-            // 
             // btnProfile
             // 
             this.btnProfile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnProfile.FlatAppearance.BorderSize = 0;
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
+            this.btnProfile.Image = global::QuanLyThanhVien.Properties.Resources.baseline_account_box_black_18dp;
             this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.Location = new System.Drawing.Point(3, 0);
             this.btnProfile.Name = "btnProfile";
@@ -361,13 +351,23 @@
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // pnlRimProfile
+            // btnEmployees
             // 
-            this.pnlRimProfile.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlRimProfile.Location = new System.Drawing.Point(0, 0);
-            this.pnlRimProfile.Name = "pnlRimProfile";
-            this.pnlRimProfile.Size = new System.Drawing.Size(3, 40);
-            this.pnlRimProfile.TabIndex = 0;
+            this.btnEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEmployees.FlatAppearance.BorderSize = 0;
+            this.btnEmployees.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployees.Image = global::QuanLyThanhVien.Properties.Resources.baseline_group_black_18dp;
+            this.btnEmployees.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployees.Location = new System.Drawing.Point(3, 0);
+            this.btnEmployees.Name = "btnEmployees";
+            this.btnEmployees.Size = new System.Drawing.Size(167, 40);
+            this.btnEmployees.TabIndex = 1;
+            this.btnEmployees.Text = " Nhân viên";
+            this.btnEmployees.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployees.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmployees.UseVisualStyleBackColor = true;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // frmMain
             // 
@@ -388,8 +388,8 @@
             this.pnlMenuProject.ResumeLayout(false);
             this.pnlMenuTime.ResumeLayout(false);
             this.pnlMenuSalary.ResumeLayout(false);
-            this.pnlMenuEmployee.ResumeLayout(false);
             this.pnlProfile.ResumeLayout(false);
+            this.pnlMenuEmployee.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

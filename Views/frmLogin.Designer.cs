@@ -140,7 +140,7 @@
             // 
             // picAvataLab
             // 
-            this.picAvataLab.Image = ((System.Drawing.Image)(resources.GetObject("picAvataLab.Image")));
+            this.picAvataLab.Image = global::QuanLyThanhVien.Properties.Resources.management_100;
             this.picAvataLab.Location = new System.Drawing.Point(77, 2);
             this.picAvataLab.Name = "picAvataLab";
             this.picAvataLab.Size = new System.Drawing.Size(250, 250);
@@ -165,10 +165,10 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.picAvataLab)).EndInit();

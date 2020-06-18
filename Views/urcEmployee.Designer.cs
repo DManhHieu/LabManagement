@@ -33,9 +33,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
@@ -94,6 +94,7 @@
             this.button2.Text = "Dự án ";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             // 
             // button1
             // 
@@ -109,16 +110,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // picAvatar
-            // 
-            this.picAvatar.Image = global::QuanLyThanhVien.Properties.Resources.baseline_add_photo_alternate_black_48dp;
-            this.picAvatar.Location = new System.Drawing.Point(0, 0);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(105, 150);
-            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picAvatar.TabIndex = 1;
-            this.picAvatar.TabStop = false;
             // 
             // lblPosition
             // 
@@ -141,6 +132,16 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Tên nhân viên";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // picAvatar
+            // 
+            this.picAvatar.Image = global::QuanLyThanhVien.Properties.Resources.baseline_add_photo_alternate_black_48dp;
+            this.picAvatar.Location = new System.Drawing.Point(0, 0);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(105, 150);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picAvatar.TabIndex = 1;
+            this.picAvatar.TabStop = false;
             // 
             // urcEmployee
             // 

@@ -300,6 +300,15 @@
       <DependentUpon>DBLabManagement.edmx</DependentUpon>
       <LastGenOutput>DBLabManagement.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\management-100.png" />
+    <None Include="Resources\128x128.png" />
+    <None Include="Resources\project-management.png" />
+    <None Include="Resources\dashboard.png" />
+    <None Include="Resources\finace.png" />
+    <None Include="Resources\mywork.png" />
+    <None Include="Resources\time.png" />
+    <None Include="Resources\baseline_group_black_18dp.png" />
+    <None Include="Resources\baseline_account_box_black_18dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
