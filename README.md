@@ -38,20 +38,20 @@ Cập nhật thông tin của các nhân viên
 Thêm nhân viên
 Kiểm tra công việc của nhân viên
 ```
->> ![image](https://user-images.githubusercontent.com/61335680/84988301-f946b880-b16b-11ea-8c56-2ac7d012b501.png)
->> ![image](https://user-images.githubusercontent.com/61335680/84988451-357a1900-b16c-11ea-8743-a2fda56f6685.png)
->> ![image](https://user-images.githubusercontent.com/61335680/84988626-84c04980-b16c-11ea-8add-0cb7b86663ec.png)
+> ![image](https://user-images.githubusercontent.com/61335680/84988301-f946b880-b16b-11ea-8c56-2ac7d012b501.png)
+> ![image](https://user-images.githubusercontent.com/61335680/84988451-357a1900-b16c-11ea-8743-a2fda56f6685.png)
+> ![image](https://user-images.githubusercontent.com/61335680/84988626-84c04980-b16c-11ea-8add-0cb7b86663ec.png)
 #### Thời gian làm việc : 
->> ![image](https://user-images.githubusercontent.com/61335680/84988837-e5e81d00-b16c-11ea-90c6-82f3cbff0ff7.png)
->> Dễ dàng thêm xóa sửa : 
->>> ![image](https://user-images.githubusercontent.com/61335680/84989386-ca314680-b16d-11ea-97c1-9ec521f8da9c.png)
+> ![image](https://user-images.githubusercontent.com/61335680/84988837-e5e81d00-b16c-11ea-90c6-82f3cbff0ff7.png)
+> Dễ dàng thêm xóa sửa : 
+>> ![image](https://user-images.githubusercontent.com/61335680/84989386-ca314680-b16d-11ea-97c1-9ec521f8da9c.png)
 #### Dự án : 
->>![image](https://user-images.githubusercontent.com/61335680/84989535-05337a00-b16e-11ea-8c51-708c7006a41b.png)
->> Dễ dàng quản lý 
->>>> ![image](https://user-images.githubusercontent.com/61335680/84989794-69eed480-b16e-11ea-9c02-663a0d98b032.png)
+>![image](https://user-images.githubusercontent.com/61335680/84989535-05337a00-b16e-11ea-8c51-708c7006a41b.png)
+> Dễ dàng quản lý 
+>> ![image](https://user-images.githubusercontent.com/61335680/84989794-69eed480-b16e-11ea-9c02-663a0d98b032.png)
 #### Quản lý lương : 
->> ![image](https://user-images.githubusercontent.com/61335680/84990180-f600fc00-b16e-11ea-9788-ab7087636d09.png)
->> Lọc lương theo từng tháng : 
->>> ![image](https://user-images.githubusercontent.com/61335680/84990256-1335ca80-b16f-11ea-9c14-f7216f1286bf.png)
->> Xuất Excel :
->>> ![image](https://user-images.githubusercontent.com/61335680/84990367-39f40100-b16f-11ea-859b-fa61e8b02be3.png)
+> ![image](https://user-images.githubusercontent.com/61335680/84990180-f600fc00-b16e-11ea-9788-ab7087636d09.png)
+> Lọc lương theo từng tháng : 
+>> ![image](https://user-images.githubusercontent.com/61335680/84990256-1335ca80-b16f-11ea-9c14-f7216f1286bf.png)
+> Xuất Excel :
+>> ![image](https://user-images.githubusercontent.com/61335680/84990367-39f40100-b16f-11ea-859b-fa61e8b02be3.png)
