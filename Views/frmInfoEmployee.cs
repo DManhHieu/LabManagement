@@ -24,18 +24,32 @@ namespace QuanLyThanhVien.Views
             {
                 Employee = EmployeeController.SelectEmployee;
                 btnDelete.Visible = !EmployeeController.IsManager;
+                txtMaNhanVien.ReadOnly = !mainController.IsManager;
                 btnDelete.Visible = !(Employee.IDEmployee == mainController.EmployeeLogin.IDEmployee);
                 lblPassword.Visible = Employee.IDEmployee == mainController.EmployeeLogin.IDEmployee;
-                txtMaNhanVien.ReadOnly= !EmployeeController.IsManager;
                 txtPassword.Visible = Employee.IDEmployee == mainController.EmployeeLogin.IDEmployee;
                 
             }
             else
             {
+                _employee.IDEmployee = -1;
                 Password = "0000";
             }
          
 
+        }
+        private Employee _employee = null;
+        public frmInfoEmployee(Employee employee)
+        {
+            InitializeComponent();
+
+            
+            Employee = employee;
+            
+            btnDelete.Visible = false;
+            lblPassword.Visible = true;
+            txtMaNhanVien.ReadOnly = !mainController.IsManager;
+            txtPassword.Visible = true;
         }
         //public void SetEmployee(Employee employee)
         //{
@@ -52,35 +66,35 @@ namespace QuanLyThanhVien.Views
         //    Description = employee.Description;
         //    StartDate = employee.StartDate.Value;
 
-        
+
         public Employee Employee
         {
             get
             {
-                Employee employee = new Employee();
-                employee.IDEmployee = ID;
-                employee.UserName = MaNhanVien;
-                employee.FirstName = FirstName;
-                employee.LastName = LastName;
-                employee.Birthday = Birthday;
-                employee.PathAvatar = PathAvatar;
-                employee.CMND = CMND;
-                employee.Address = Address;
-                employee.Position = Position;
-                employee.Email = Email;
-                employee.PhoneNumber = PhoneNumber;
-                employee.Description = Description;
-                employee.StartDate = StartDate;
-                employee.EPassword = Password;
-                employee.IDLAB = IDLab;
+                if (_employee == null)
+                {
+                    _employee = new Employee();
+                }
+                _employee.UserName = MaNhanVien;
+                _employee.FirstName = FirstName;
+                _employee.LastName = LastName;
+                _employee.Birthday = Birthday;
+                _employee.PathAvatar = PathAvatar;
+                _employee.CMND = CMND;
+                _employee.Address = Address;
+                _employee.Position = Position;
+                _employee.Email = Email;
+                _employee.PhoneNumber = PhoneNumber;
+                _employee.Description = Description;
+                _employee.StartDate = StartDate;
+                _employee.EPassword = Password;
+                _employee.IDLAB = IDLab;
                 
-                return employee;
+                return _employee;
             }
             set
             {
-                if(value.IDEmployee!=null)
-                ID = value.IDEmployee;
-                if(value.UserName!=null)
+                _employee = value;
                 MaNhanVien = value.UserName;
                 if(value.FirstName!=null)
                 FirstName = value.FirstName;
@@ -110,7 +124,6 @@ namespace QuanLyThanhVien.Views
                     IDLab = (int)value.IDLAB;
             }
         }
-        private int ID { get; set; }
         private string Password 
         {
             get 

@@ -40,7 +40,7 @@ namespace QuanLyThanhVien.Views
             this.label1 = new System.Windows.Forms.Label();
             this.dataSalary = new System.Windows.Forms.DataGridView();
             this.cMaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cLuongCoBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cThuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -164,7 +164,7 @@ namespace QuanLyThanhVien.Views
             this.dataSalary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataSalary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cMaNhanVien,
-            this.cHoTen,
+            this.UserName,
             this.cLuongCoBan,
             this.cPhat,
             this.cThuong,
@@ -188,15 +188,14 @@ namespace QuanLyThanhVien.Views
             // cMaNhanVien
             // 
             this.cMaNhanVien.DataPropertyName = "IDEmployee";
-            this.cMaNhanVien.HeaderText = "Mã nhân viên";
+            this.cMaNhanVien.HeaderText = "ID";
             this.cMaNhanVien.Name = "cMaNhanVien";
             // 
-            // cHoTen
+            // UserName
             // 
-            this.cHoTen.DataPropertyName = "UserName";
-            this.cHoTen.HeaderText = "Họ tên";
-            this.cHoTen.Name = "cHoTen";
-            this.cHoTen.ReadOnly = true;
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "Họ và tên";
+            this.UserName.Name = "UserName";
             // 
             // cLuongCoBan
             // 
@@ -282,7 +281,7 @@ namespace QuanLyThanhVien.Views
         private Button btnDelete;
         private DataGridView dataSalary;
         private DataGridViewTextBoxColumn cMaNhanVien;
-        private DataGridViewTextBoxColumn cHoTen;
+        private DataGridViewTextBoxColumn UserName;
         private DataGridViewTextBoxColumn cLuongCoBan;
         private DataGridViewTextBoxColumn cPhat;
         private DataGridViewTextBoxColumn cThuong;

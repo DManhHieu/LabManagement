@@ -20,5 +20,9 @@ namespace QuanLyThanhVien.Models
         public Nullable<int> IDEmployee { get; set; }
     
         public virtual Employee Employee { get; set; }
+        public override string ToString()
+        {
+            return StartDate.Value.ToShortTimeString() + "-" + EndDate.Value.ToShortTimeString();
+        }
     }
 }

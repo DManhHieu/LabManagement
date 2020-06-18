@@ -39,6 +39,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.picAvataLab = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picAvataLab)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,11 +149,23 @@
             this.picAvataLab.TabIndex = 7;
             this.picAvataLab.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(304, 465);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 16);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "® Nhóm 10 ";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 490);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.picAvataLab);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -170,7 +183,7 @@
             this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "Quản lý nhân viên ";
             ((System.ComponentModel.ISupportInitialize)(this.picAvataLab)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -189,5 +202,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox picAvataLab;
+        private System.Windows.Forms.Label label3;
     }
 }

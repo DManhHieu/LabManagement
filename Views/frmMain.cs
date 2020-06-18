@@ -29,6 +29,7 @@ namespace QuanLyThanhVien.Views
 
         private void ResetMenu()
         {
+            mainController.EmployeeLogin = EmployeeController.GetEmployee(mainController.EmployeeLogin.IDEmployee);
             this.lblControl.Text = "Xin chào " + mainController.EmployeeLogin.ToString();
             this.pnlRimDashBoard.BackColor = this.pnlMenu.BackColor;
             this.pnlRimEmployees.BackColor = this.pnlMenu.BackColor;
@@ -189,10 +190,9 @@ namespace QuanLyThanhVien.Views
             }
             ResetMenu();
             this.pnlRimProfile.BackColor = Color.Blue;
-            EmployeeController.SelectID = mainController.EmployeeLogin.IDEmployee;
-            EmployeeController.urcEmployee = null;
-            frmInfoEmployee info = new frmInfoEmployee();
-
+            //EmployeeController.SelectID = mainController.EmployeeLogin.IDEmployee;
+            //EmployeeController.urcEmployee = null;
+            frmInfoEmployee info = new frmInfoEmployee(mainController.EmployeeLogin);
             info.Text = "Thông tin cá nhân ";
             SetView(info);
         }

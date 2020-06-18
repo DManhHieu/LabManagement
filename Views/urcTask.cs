@@ -30,6 +30,7 @@ namespace QuanLyThanhVien.Views
             this.Click += InfoTaskProject_Click;
             lblTaskName.Click += InfoTaskProject_Click;
             _infoPorject = infoProject;
+            lblProjectName.Visible = false;
             Task = task;
 
         }

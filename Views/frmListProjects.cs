@@ -18,6 +18,7 @@ namespace QuanLyThanhVien.Views
         {
             InitializeComponent();
             ProjectController.LoadList(this);
+            btnNewProject.Visible = mainController.IsManager;
         }
 
         private void btnNewProject_Click(object sender, EventArgs e)

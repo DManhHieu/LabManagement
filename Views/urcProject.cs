@@ -32,8 +32,8 @@ namespace QuanLyThanhVien.Views
             {
                 _project = value;
                 lblNameProject.Text = value.ToString();
-                lblStartDate.Text ="Bắt đầu : " +value.StartDate.ToString();
-                lblEndDate.Text ="Kết thúc : "+ value.EndDate.ToString();
+                lblStartDate.Text ="Bắt đầu : " +value.StartDate.Value.ToString("dd/MM/yyyy hh:mm");
+                lblEndDate.Text ="Kết thúc : "+ value.EndDate.Value.ToString("dd/MM/yyyy hh:mm");
                 pgbComplete.Value = (int)( ProjectController.intComplete(value)*100);
                 lblComplete.Text = pgbComplete.Value.ToString() + "%";
                 

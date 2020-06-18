@@ -47,7 +47,7 @@ namespace QuanLyThanhVien.Controllers
                             .Select(x => new Salary
                             {
                                 IDEmployee = x.IDEmployee,
-                                UserName = x.UserName,
+                                UserName = _context.Employees.FirstOrDefault(e=>e.IDEmployee==x.IDEmployee).ToString(),
                                 LuongCoBan = x.LuongCoBan,
                                 LuongDaNhan = x.LuongDaNhan,
                                 Phat = x.Phat,
@@ -85,7 +85,7 @@ namespace QuanLyThanhVien.Controllers
                             .Select(x => new Salary
                             {
                                 IDEmployee = x.IDEmployee,
-                                UserName = x.UserName,
+                                UserName = _context.Employees.FirstOrDefault(e => e.IDEmployee == x.IDEmployee).ToString(),
                                 LuongCoBan = x.LuongCoBan,
                                 LuongDaNhan = x.LuongDaNhan,
                                 Phat = x.Phat,
