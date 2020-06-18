@@ -1,9 +1,10 @@
 # LabManagement 
 Đồ án cuối kì môn Lập trình trên Windows
+#### Giáo viên hướng dẫn : *** Huỳnh Xuân Phụng ***
 ## Nhóm  : ***Nhóm 10***  
  ```
-Đoàn Mạnh Hiếu
-Hoàng Dương Hùng
+Đoàn Mạnh Hiếu 18110281
+Hoàng Dương Hùng 18110296
 ```
 
 ## Diagram : 
