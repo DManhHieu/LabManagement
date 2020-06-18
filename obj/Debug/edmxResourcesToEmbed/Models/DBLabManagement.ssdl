@@ -57,9 +57,11 @@
     </Key>
     <Property Name="IDEmployee" Type="int" Nullable="false" />
     <Property Name="Month" Type="date" Nullable="false" />
+    <Property Name="UserName" Type="char" MaxLength="50" />
     <Property Name="LuongCoBan" Type="int" />
     <Property Name="Phat" Type="int" />
     <Property Name="Thuong" Type="int" />
+    <Property Name="LuongDaNhan" Type="int" />
   </EntityType>
   <EntityType Name="Task">
     <Key>
@@ -102,7 +104,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__EmployeeP__IDEmp__32E0915F">
+  <Association Name="FK__EmployeeP__IDEmp__33D4B598">
     <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
     <End Role="EmployeeProject" Type="Self.EmployeeProject" Multiplicity="*" />
     <ReferentialConstraint>
@@ -114,7 +116,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__EmployeeP__IDPro__33D4B598">
+  <Association Name="FK__EmployeeP__IDPro__34C8D9D1">
     <End Role="Project" Type="Self.Project" Multiplicity="1" />
     <End Role="EmployeeProject" Type="Self.EmployeeProject" Multiplicity="*" />
     <ReferentialConstraint>
@@ -123,6 +125,18 @@
       </Principal>
       <Dependent Role="EmployeeProject">
         <PropertyRef Name="IDProject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Project__IDLab__2A4B4B5E">
+    <End Role="Lab" Type="Self.Lab" Multiplicity="0..1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lab">
+        <PropertyRef Name="IDLab" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="IDLab" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -138,7 +152,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Salary__IDEmploy__398D8EEE">
+  <Association Name="FK__Salary__IDEmploy__3A81B327">
     <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
     <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
     <ReferentialConstraint>
@@ -150,7 +164,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Task__IDProject__2C3393D0">
+  <Association Name="FK__Task__IDProject__2D27B809">
     <End Role="Project" Type="Self.Project" Multiplicity="0..1" />
     <End Role="Task" Type="Self.Task" Multiplicity="*" />
     <ReferentialConstraint>
@@ -162,7 +176,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TASK_EMPL__IDEmp__2F10007B">
+  <Association Name="FK__TASK_EMPL__IDEmp__300424B4">
     <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
     <End Role="TASK_EMPLOYEE" Type="Self.TASK_EMPLOYEE" Multiplicity="*" />
     <ReferentialConstraint>
@@ -174,7 +188,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TASK_EMPL__IDTas__300424B4">
+  <Association Name="FK__TASK_EMPL__IDTas__30F848ED">
     <End Role="Task" Type="Self.Task" Multiplicity="1" />
     <End Role="TASK_EMPLOYEE" Type="Self.TASK_EMPLOYEE" Multiplicity="*" />
     <ReferentialConstraint>
@@ -186,7 +200,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TimeWork__IDEmpl__36B12243">
+  <Association Name="FK__TimeWork__IDEmpl__37A5467C">
     <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
     <End Role="TimeWork" Type="Self.TimeWork" Multiplicity="*" />
     <ReferentialConstraint>
@@ -195,18 +209,6 @@
       </Principal>
       <Dependent Role="TimeWork">
         <PropertyRef Name="IDEmployee" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Project_Lab">
-    <End Role="Lab" Type="Self.Lab" Multiplicity="0..1" />
-    <End Role="Project" Type="Self.Project" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Lab">
-        <PropertyRef Name="IDLab" />
-      </Principal>
-      <Dependent Role="Project">
-        <PropertyRef Name="IDLab" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -223,41 +225,41 @@
       <End Role="Lab" EntitySet="Lab" />
       <End Role="Employee" EntitySet="Employee" />
     </AssociationSet>
-    <AssociationSet Name="FK__EmployeeP__IDEmp__32E0915F" Association="Self.FK__EmployeeP__IDEmp__32E0915F">
+    <AssociationSet Name="FK__EmployeeP__IDEmp__33D4B598" Association="Self.FK__EmployeeP__IDEmp__33D4B598">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="EmployeeProject" EntitySet="EmployeeProject" />
     </AssociationSet>
-    <AssociationSet Name="FK__EmployeeP__IDPro__33D4B598" Association="Self.FK__EmployeeP__IDPro__33D4B598">
+    <AssociationSet Name="FK__EmployeeP__IDPro__34C8D9D1" Association="Self.FK__EmployeeP__IDPro__34C8D9D1">
       <End Role="Project" EntitySet="Project" />
       <End Role="EmployeeProject" EntitySet="EmployeeProject" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Project__IDLab__2A4B4B5E" Association="Self.FK__Project__IDLab__2A4B4B5E">
+      <End Role="Lab" EntitySet="Lab" />
+      <End Role="Project" EntitySet="Project" />
     </AssociationSet>
     <AssociationSet Name="FK__Project__IDManag__29572725" Association="Self.FK__Project__IDManag__29572725">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="Project" EntitySet="Project" />
     </AssociationSet>
-    <AssociationSet Name="FK__Salary__IDEmploy__398D8EEE" Association="Self.FK__Salary__IDEmploy__398D8EEE">
+    <AssociationSet Name="FK__Salary__IDEmploy__3A81B327" Association="Self.FK__Salary__IDEmploy__3A81B327">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="Salary" EntitySet="Salary" />
     </AssociationSet>
-    <AssociationSet Name="FK__Task__IDProject__2C3393D0" Association="Self.FK__Task__IDProject__2C3393D0">
+    <AssociationSet Name="FK__Task__IDProject__2D27B809" Association="Self.FK__Task__IDProject__2D27B809">
       <End Role="Project" EntitySet="Project" />
       <End Role="Task" EntitySet="Task" />
     </AssociationSet>
-    <AssociationSet Name="FK__TASK_EMPL__IDEmp__2F10007B" Association="Self.FK__TASK_EMPL__IDEmp__2F10007B">
+    <AssociationSet Name="FK__TASK_EMPL__IDEmp__300424B4" Association="Self.FK__TASK_EMPL__IDEmp__300424B4">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="TASK_EMPLOYEE" EntitySet="TASK_EMPLOYEE" />
     </AssociationSet>
-    <AssociationSet Name="FK__TASK_EMPL__IDTas__300424B4" Association="Self.FK__TASK_EMPL__IDTas__300424B4">
+    <AssociationSet Name="FK__TASK_EMPL__IDTas__30F848ED" Association="Self.FK__TASK_EMPL__IDTas__30F848ED">
       <End Role="Task" EntitySet="Task" />
       <End Role="TASK_EMPLOYEE" EntitySet="TASK_EMPLOYEE" />
     </AssociationSet>
-    <AssociationSet Name="FK__TimeWork__IDEmpl__36B12243" Association="Self.FK__TimeWork__IDEmpl__36B12243">
+    <AssociationSet Name="FK__TimeWork__IDEmpl__37A5467C" Association="Self.FK__TimeWork__IDEmpl__37A5467C">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="TimeWork" EntitySet="TimeWork" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Project_Lab" Association="Self.FK_Project_Lab">
-      <End Role="Lab" EntitySet="Lab" />
-      <End Role="Project" EntitySet="Project" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

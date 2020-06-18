@@ -54,38 +54,43 @@
             // label144
             // 
             this.label144.AutoSize = true;
-            this.label144.Location = new System.Drawing.Point(583, 56);
+            this.label144.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label144.Location = new System.Drawing.Point(585, 49);
             this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(63, 13);
+            this.label144.Size = new System.Drawing.Size(93, 20);
             this.label144.TabIndex = 3;
             this.label144.Text = "Hoàn thành";
             // 
             // label143
             // 
             this.label143.AutoSize = true;
-            this.label143.Location = new System.Drawing.Point(298, 56);
+            this.label143.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label143.Location = new System.Drawing.Point(300, 49);
             this.label143.Name = "label143";
-            this.label143.Size = new System.Drawing.Size(52, 13);
+            this.label143.Size = new System.Drawing.Size(77, 20);
             this.label143.TabIndex = 3;
             this.label143.Text = "Đang làm";
             // 
             // label142
             // 
             this.label142.AutoSize = true;
-            this.label142.Location = new System.Drawing.Point(10, 56);
+            this.label142.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label142.Location = new System.Drawing.Point(12, 49);
             this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(48, 13);
+            this.label142.Size = new System.Drawing.Size(71, 20);
             this.label142.TabIndex = 2;
             this.label142.Text = "Cần làm ";
             // 
             // btnNewProject
             // 
+            this.btnNewProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNewProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewProject.Location = new System.Drawing.Point(743, 12);
             this.btnNewProject.Name = "btnNewProject";
             this.btnNewProject.Size = new System.Drawing.Size(121, 40);
             this.btnNewProject.TabIndex = 1;
-            this.btnNewProject.Text = "New Project";
+            this.btnNewProject.Text = "Dự án mới";
             this.btnNewProject.UseVisualStyleBackColor = true;
             this.btnNewProject.Click += new System.EventHandler(this.btnNewProject_Click);
             // 

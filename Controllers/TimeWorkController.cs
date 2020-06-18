@@ -57,7 +57,7 @@ namespace QuanLyThanhVien.Controllers
         {
             using(var _context=new DBLabManagementEntities())
             {
-                foreach(var time in _context.TimeWorks.Where(x => x.IDEmployee == frmSetTime.Employee.IDEmployee))
+                foreach(var time in _context.TimeWorks.Where(x => x.IDEmployee == frmSetTime.Employee.IDEmployee).OrderBy(x=>x.StartDate))
                 {
                     if (time.StartDate.Value.Date == frmSetTime.Day.Date)
                     {

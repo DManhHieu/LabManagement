@@ -49,6 +49,8 @@
     <EntitySetMapping Name="Salaries">
       <EntityTypeMapping TypeName="DBLabManagementModel.Salary">
         <MappingFragment StoreEntitySet="Salary">
+          <ScalarProperty Name="LuongDaNhan" ColumnName="LuongDaNhan" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="IDEmployee" ColumnName="IDEmployee" />
           <ScalarProperty Name="Month" ColumnName="Month" />
           <ScalarProperty Name="LuongCoBan" ColumnName="LuongCoBan" />

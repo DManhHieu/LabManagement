@@ -65,6 +65,8 @@
     <Property Name="Phat" Type="Int32" />
     <Property Name="Thuong" Type="Int32" />
     <NavigationProperty Name="Employee" Relationship="Self.FK__Salary__IDEmploy__398D8EEE" FromRole="Salary" ToRole="Employee" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="LuongDaNhan" Type="Int32" />
   </EntityType>
   <EntityType Name="Task">
     <Key>

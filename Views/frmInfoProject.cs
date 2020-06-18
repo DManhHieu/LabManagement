@@ -41,7 +41,9 @@ namespace QuanLyThanhVien.Views
             InitializeComponent();
             _frmList = frmListProjects;
             IsNew = true;
+            _urcProject = null;
             cbStatus.SelectedIndex = 0;
+            txtSearchEmployee.TextChanged += TxtSearchEmployee_TextChanged;
         }
         private void button3_Click(object sender, EventArgs e)
         {
@@ -83,6 +85,12 @@ namespace QuanLyThanhVien.Views
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
+                if (IsNew)
+                {
+                    ProjectController.Add(Project, _frmList);
+                    IsNew = false;
+                    Project = ProjectController._project;
+                }
                 Task task = new Task();
                 task.TaskName = txtTaskName.Text;
                 task.StartDate = dtpTaskStartDate.Value;

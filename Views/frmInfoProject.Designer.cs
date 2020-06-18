@@ -36,7 +36,6 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.flListTasks = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnAddTask = new System.Windows.Forms.Button();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.dtpTaskEndDate = new System.Windows.Forms.DateTimePicker();
@@ -144,7 +143,6 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnAddTask);
             this.panel6.Controls.Add(this.label54);
             this.panel6.Controls.Add(this.label55);
             this.panel6.Controls.Add(this.dtpTaskEndDate);
@@ -155,18 +153,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(891, 39);
             this.panel6.TabIndex = 1;
-            // 
-            // btnAddTask
-            // 
-            this.btnAddTask.FlatAppearance.BorderSize = 0;
-            this.btnAddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTask.Location = new System.Drawing.Point(5, 7);
-            this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(24, 23);
-            this.btnAddTask.TabIndex = 12;
-            this.btnAddTask.Text = "+";
-            this.btnAddTask.UseVisualStyleBackColor = true;
             // 
             // label54
             // 
@@ -473,7 +459,6 @@
         private System.Windows.Forms.DateTimePicker dtpTaskEndDate;
         private System.Windows.Forms.DateTimePicker dtpTaskStartDate;
         private System.Windows.Forms.FlowLayoutPanel flListTasks;
-        private System.Windows.Forms.Button btnAddTask;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.ListBox lbSearchEmployees;

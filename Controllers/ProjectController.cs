@@ -32,7 +32,7 @@ namespace QuanLyThanhVien.Controllers
         {
             using (var _context = new DBLabManagementEntities())
             {
-                var project = _context.Projects.Where(x => x.IDLab == mainController.Lab.IDLab);
+                var project = _context.Projects.Where(x => x.IDLab == mainController.Lab.IDLab).OrderBy(x=>x.StartDate);
                 foreach( Project p in project)
                 {
                     AddurcProject(p, frmListProjects);
@@ -75,6 +75,11 @@ namespace QuanLyThanhVien.Controllers
             using (var _context = new DBLabManagementEntities())
             {
                 var del = _context.Projects.FirstOrDefault(x => x.IDProject == project.IDProject);
+                foreach(var task in ListTask(del))
+                {
+                    TaskController.Delete(task);
+                }
+               
                 _context.Projects.Remove(del);
                 _context.SaveChanges();
             }
@@ -85,10 +90,12 @@ namespace QuanLyThanhVien.Controllers
             {
                 _context.Projects.AddOrUpdate(project);
                 _context.SaveChanges();
-                urc.Dispose();
+                if(urc!=null)
+                    urc.Dispose();
                 AddurcProject(project, frm);
             }
         }
+        public static Project _project;
         public static void Add(Project project,frmListProjects frm)
         {
             using (var _context = new DBLabManagementEntities())
@@ -105,7 +112,7 @@ namespace QuanLyThanhVien.Controllers
                 project.IDLab = mainController.Lab.IDLab;
                 _context.Projects.Add(project);
                 _context.SaveChanges();
-          
+                _project = _context.Projects.FirstOrDefault(x => x.IDProject == project.IDProject);
                 AddurcProject(project, frm);
             }
         }

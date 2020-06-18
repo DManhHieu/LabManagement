@@ -175,5 +175,20 @@ namespace QuanLyThanhVien.Controllers
                 urcTask.Dispose();
             }
         }
+        public static void Delete(Task t)
+        {
+            using (var _context = new DBLabManagementEntities())
+            {
+                var task = _context.Tasks.FirstOrDefault(x => x.IDTask == t.IDTask);
+                foreach (var employee in task.Employees)
+                {
+                    var e = _context.Employees.FirstOrDefault(x => x.IDEmployee == employee.IDEmployee);
+                    if (e != null)
+                        e.Tasks.Remove(task);
+                }
+                _context.Tasks.Remove(task);
+                _context.SaveChanges();
+            }
+        }
     }
 }

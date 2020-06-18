@@ -36,6 +36,7 @@ CREATE TABLE Project(
 	Description NVARCHAR(MAX),
 	ProjectName NVARCHAR(255),
 	IDManager INT FOREIGN KEY REFERENCES EMPLOYEE(IDEmployee),
+	IDLab INT FOREIGN KEY REFERENCES LAB(IDLab)
 	)
 GO
 CREATE TABLE Task(
@@ -45,7 +46,7 @@ CREATE TABLE Task(
 	StartDate DATETIME,
 	EndDate DATETIME,
 	TaskName NVARCHAR(255),
-	Status BOOL,
+	Status NVARCHAR(15),
 	)
 GO
 CREATE TABLE TASK_EMPLOYEE(
@@ -74,7 +75,9 @@ CREATE TABLE Salary(
 	IDEmployee INT FOREIGN KEY REFERENCES Employee(IDEmployee),
 	Month Date,
 	PRIMARY KEY(IDEmployee, Month),
+	UserName char(50) NULL,
 	LuongCoBan INT,
 	Phat INT,
-	Thuong INT
+	Thuong INT,
+	LuongDaNhan INT NULL,
 	)
