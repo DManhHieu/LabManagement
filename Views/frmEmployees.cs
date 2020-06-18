@@ -20,12 +20,14 @@ namespace QuanLyThanhVien.Views
             InitializeComponent();
             EmployeeController.frmEmployees = this;
             EmployeeController.LoadList();
-           
+            btnAddNewEmployee.Visible = mainController.IsManager;
         }
         private void btnAddNewEmployee_Click(object sender, EventArgs e)
         {
-            frmInfoEmployee employee = new frmInfoEmployee(-1);
+            EmployeeController.SelectID = -1;
+            frmInfoEmployee employee = new frmInfoEmployee();
             employee.Text = "Thêm nhân viên";
+ 
             mainController.SetView(employee);
         }
 
@@ -34,9 +36,9 @@ namespace QuanLyThanhVien.Views
          
 
         }
-        public void AddEmployee(Employee _employee)
+        public void AddEmployee(int IDE)
         {
-            urcEmployee employee = new urcEmployee(_employee.IDEmployee);
+            urcEmployee employee = new urcEmployee(IDE);
             this.flpEmployees.Controls.Add(employee);
         }
        

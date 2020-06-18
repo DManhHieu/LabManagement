@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBLabManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBLabManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="IDEmployee" />
@@ -53,6 +53,7 @@
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="ProjectName" Type="nvarchar" MaxLength="255" />
           <Property Name="IDManager" Type="int" />
+          <Property Name="IDLab" Type="int" />
         </EntityType>
         <EntityType Name="Salary">
           <Key>
@@ -202,6 +203,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Project_Lab">
+          <End Role="Lab" Type="Self.Lab" Multiplicity="0..1" />
+          <End Role="Project" Type="Self.Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lab">
+              <PropertyRef Name="IDLab" />
+            </Principal>
+            <Dependent Role="Project">
+              <PropertyRef Name="IDLab" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DBLabManagementModelStoreContainer">
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EmployeeProject" EntityType="Self.EmployeeProject" Schema="dbo" store:Type="Tables" />
@@ -247,9 +260,12 @@
             <End Role="Employee" EntitySet="Employee" />
             <End Role="TimeWork" EntitySet="TimeWork" />
           </AssociationSet>
+          <AssociationSet Name="FK_Project_Lab" Association="Self.FK_Project_Lab">
+            <End Role="Lab" EntitySet="Lab" />
+            <End Role="Project" EntitySet="Project" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBLabManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -288,6 +304,7 @@
           <Property Name="LabName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="IDMangager" Type="Int32" />
           <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__IDLAB__267ABA7A" FromRole="Lab" ToRole="Employee" />
+          <NavigationProperty Name="Projects" Relationship="DBLabManagementModel.FK_Project_Lab" FromRole="Lab" ToRole="Project" />
         </EntityType>
         <EntityType Name="Project">
           <Key>
@@ -303,6 +320,8 @@
           <NavigationProperty Name="Employee" Relationship="Self.FK__Project__IDManag__29572725" FromRole="Project" ToRole="Employee" />
           <NavigationProperty Name="Tasks" Relationship="Self.FK__Task__IDProject__2C3393D0" FromRole="Project" ToRole="Task" />
           <NavigationProperty Name="Employees" Relationship="Self.EmployeeProject" FromRole="Project" ToRole="Employee" />
+          <Property Name="IDLab" Type="Int32" />
+          <NavigationProperty Name="Lab" Relationship="DBLabManagementModel.FK_Project_Lab" FromRole="Project" ToRole="Lab" />
         </EntityType>
         <EntityType Name="Salary">
           <Key>
@@ -443,7 +462,23 @@
             <End Role="Employee" EntitySet="Employees" />
             <End Role="Task" EntitySet="Tasks" />
           </AssociationSet>
+          <AssociationSet Name="FK_Project_Lab" Association="DBLabManagementModel.FK_Project_Lab">
+            <End Role="Lab" EntitySet="Labs" />
+            <End Role="Project" EntitySet="Projects" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_Project_Lab">
+          <End Type="DBLabManagementModel.Lab" Role="Lab" Multiplicity="0..1" />
+          <End Type="DBLabManagementModel.Project" Role="Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lab">
+              <PropertyRef Name="IDLab" />
+            </Principal>
+            <Dependent Role="Project">
+              <PropertyRef Name="IDLab" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -484,6 +519,7 @@
           <EntitySetMapping Name="Projects">
             <EntityTypeMapping TypeName="DBLabManagementModel.Project">
               <MappingFragment StoreEntitySet="Project">
+                <ScalarProperty Name="IDLab" ColumnName="IDLab" />
                 <ScalarProperty Name="IDProject" ColumnName="IDProject" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />

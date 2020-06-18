@@ -18,6 +18,7 @@ namespace QuanLyThanhVien.Models
         public Lab()
         {
             this.Employees = new HashSet<Employee>();
+            this.Projects = new HashSet<Project>();
         }
     
         public int IDLab { get; set; }
@@ -26,5 +27,7 @@ namespace QuanLyThanhVien.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employee> Employees { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Project> Projects { get; set; }
     }
 }

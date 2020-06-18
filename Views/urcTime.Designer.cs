@@ -30,22 +30,22 @@
         {
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.lsbSunday = new System.Windows.Forms.ListBox();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.lsbSaturday = new System.Windows.Forms.ListBox();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.lsbFriday = new System.Windows.Forms.ListBox();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.lsbThursday = new System.Windows.Forms.ListBox();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.lsbWednesday = new System.Windows.Forms.ListBox();
             this.panel19 = new System.Windows.Forms.Panel();
+            this.lsbTuesday = new System.Windows.Forms.ListBox();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.lsbMonday = new System.Windows.Forms.ListBox();
             this.panel21 = new System.Windows.Forms.Panel();
             this.lblWorkTimeOfWeek = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.lsbMonday = new System.Windows.Forms.ListBox();
-            this.lsbTuesday = new System.Windows.Forms.ListBox();
-            this.lsbWednesday = new System.Windows.Forms.ListBox();
-            this.lsbThursday = new System.Windows.Forms.ListBox();
-            this.lsbFriday = new System.Windows.Forms.ListBox();
-            this.lsbSaturday = new System.Windows.Forms.ListBox();
-            this.lsbSunday = new System.Windows.Forms.ListBox();
             this.lblEmployee = new System.Windows.Forms.Label();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -86,6 +86,19 @@
             this.panel14.Size = new System.Drawing.Size(100, 50);
             this.panel14.TabIndex = 13;
             // 
+            // lsbSunday
+            // 
+            this.lsbSunday.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbSunday.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lsbSunday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbSunday.FormattingEnabled = true;
+            this.lsbSunday.Location = new System.Drawing.Point(0, 0);
+            this.lsbSunday.Name = "lsbSunday";
+            this.lsbSunday.Size = new System.Drawing.Size(98, 48);
+            this.lsbSunday.TabIndex = 1;
+            this.lsbSunday.Tag = "6";
+            this.lsbSunday.Click += new System.EventHandler(this.Settime_Click);
+            // 
             // panel15
             // 
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -95,6 +108,19 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(100, 50);
             this.panel15.TabIndex = 12;
+            // 
+            // lsbSaturday
+            // 
+            this.lsbSaturday.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbSaturday.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lsbSaturday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbSaturday.FormattingEnabled = true;
+            this.lsbSaturday.Location = new System.Drawing.Point(0, 0);
+            this.lsbSaturday.Name = "lsbSaturday";
+            this.lsbSaturday.Size = new System.Drawing.Size(98, 48);
+            this.lsbSaturday.TabIndex = 1;
+            this.lsbSaturday.Tag = "5";
+            this.lsbSaturday.Click += new System.EventHandler(this.Settime_Click);
             // 
             // panel16
             // 
@@ -106,6 +132,19 @@
             this.panel16.Size = new System.Drawing.Size(100, 50);
             this.panel16.TabIndex = 11;
             // 
+            // lsbFriday
+            // 
+            this.lsbFriday.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbFriday.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lsbFriday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbFriday.FormattingEnabled = true;
+            this.lsbFriday.Location = new System.Drawing.Point(0, 0);
+            this.lsbFriday.Name = "lsbFriday";
+            this.lsbFriday.Size = new System.Drawing.Size(98, 48);
+            this.lsbFriday.TabIndex = 1;
+            this.lsbFriday.Tag = "4";
+            this.lsbFriday.Click += new System.EventHandler(this.Settime_Click);
+            // 
             // panel17
             // 
             this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -115,6 +154,19 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(100, 50);
             this.panel17.TabIndex = 10;
+            // 
+            // lsbThursday
+            // 
+            this.lsbThursday.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbThursday.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lsbThursday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbThursday.FormattingEnabled = true;
+            this.lsbThursday.Location = new System.Drawing.Point(0, 0);
+            this.lsbThursday.Name = "lsbThursday";
+            this.lsbThursday.Size = new System.Drawing.Size(98, 48);
+            this.lsbThursday.TabIndex = 1;
+            this.lsbThursday.Tag = "3";
+            this.lsbThursday.Click += new System.EventHandler(this.Settime_Click);
             // 
             // panel18
             // 
@@ -126,6 +178,19 @@
             this.panel18.Size = new System.Drawing.Size(100, 50);
             this.panel18.TabIndex = 9;
             // 
+            // lsbWednesday
+            // 
+            this.lsbWednesday.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbWednesday.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lsbWednesday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbWednesday.FormattingEnabled = true;
+            this.lsbWednesday.Location = new System.Drawing.Point(0, 0);
+            this.lsbWednesday.Name = "lsbWednesday";
+            this.lsbWednesday.Size = new System.Drawing.Size(98, 48);
+            this.lsbWednesday.TabIndex = 1;
+            this.lsbWednesday.Tag = "2";
+            this.lsbWednesday.Click += new System.EventHandler(this.Settime_Click);
+            // 
             // panel19
             // 
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -136,6 +201,19 @@
             this.panel19.Size = new System.Drawing.Size(100, 50);
             this.panel19.TabIndex = 8;
             // 
+            // lsbTuesday
+            // 
+            this.lsbTuesday.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbTuesday.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lsbTuesday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbTuesday.FormattingEnabled = true;
+            this.lsbTuesday.Location = new System.Drawing.Point(0, 0);
+            this.lsbTuesday.Name = "lsbTuesday";
+            this.lsbTuesday.Size = new System.Drawing.Size(98, 48);
+            this.lsbTuesday.TabIndex = 1;
+            this.lsbTuesday.Tag = "1";
+            this.lsbTuesday.Click += new System.EventHandler(this.Settime_Click);
+            // 
             // panel20
             // 
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -145,6 +223,19 @@
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(100, 50);
             this.panel20.TabIndex = 7;
+            // 
+            // lsbMonday
+            // 
+            this.lsbMonday.BackColor = System.Drawing.SystemColors.Control;
+            this.lsbMonday.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lsbMonday.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbMonday.FormattingEnabled = true;
+            this.lsbMonday.Location = new System.Drawing.Point(0, 0);
+            this.lsbMonday.Name = "lsbMonday";
+            this.lsbMonday.Size = new System.Drawing.Size(98, 48);
+            this.lsbMonday.TabIndex = 0;
+            this.lsbMonday.Tag = "0";
+            this.lsbMonday.Click += new System.EventHandler(this.Settime_Click);
             // 
             // panel21
             // 
@@ -175,90 +266,6 @@
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(182, 50);
             this.panel22.TabIndex = 5;
-            // 
-            // lsbMonday
-            // 
-            this.lsbMonday.BackColor = System.Drawing.SystemColors.Control;
-            this.lsbMonday.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lsbMonday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsbMonday.FormattingEnabled = true;
-            this.lsbMonday.Location = new System.Drawing.Point(0, 0);
-            this.lsbMonday.Name = "lsbMonday";
-            this.lsbMonday.Size = new System.Drawing.Size(98, 48);
-            this.lsbMonday.TabIndex = 0;
-            this.lsbMonday.Click += new System.EventHandler(this.Settime_Click);
-            // 
-            // lsbTuesday
-            // 
-            this.lsbTuesday.BackColor = System.Drawing.SystemColors.Control;
-            this.lsbTuesday.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lsbTuesday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsbTuesday.FormattingEnabled = true;
-            this.lsbTuesday.Location = new System.Drawing.Point(0, 0);
-            this.lsbTuesday.Name = "lsbTuesday";
-            this.lsbTuesday.Size = new System.Drawing.Size(98, 48);
-            this.lsbTuesday.TabIndex = 1;
-            this.lsbTuesday.Click += new System.EventHandler(this.Settime_Click);
-            // 
-            // lsbWednesday
-            // 
-            this.lsbWednesday.BackColor = System.Drawing.SystemColors.Control;
-            this.lsbWednesday.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lsbWednesday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsbWednesday.FormattingEnabled = true;
-            this.lsbWednesday.Location = new System.Drawing.Point(0, 0);
-            this.lsbWednesday.Name = "lsbWednesday";
-            this.lsbWednesday.Size = new System.Drawing.Size(98, 48);
-            this.lsbWednesday.TabIndex = 1;
-            this.lsbWednesday.Click += new System.EventHandler(this.Settime_Click);
-            // 
-            // lsbThursday
-            // 
-            this.lsbThursday.BackColor = System.Drawing.SystemColors.Control;
-            this.lsbThursday.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lsbThursday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsbThursday.FormattingEnabled = true;
-            this.lsbThursday.Location = new System.Drawing.Point(0, 0);
-            this.lsbThursday.Name = "lsbThursday";
-            this.lsbThursday.Size = new System.Drawing.Size(98, 48);
-            this.lsbThursday.TabIndex = 1;
-            this.lsbThursday.Click += new System.EventHandler(this.Settime_Click);
-            // 
-            // lsbFriday
-            // 
-            this.lsbFriday.BackColor = System.Drawing.SystemColors.Control;
-            this.lsbFriday.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lsbFriday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsbFriday.FormattingEnabled = true;
-            this.lsbFriday.Location = new System.Drawing.Point(0, 0);
-            this.lsbFriday.Name = "lsbFriday";
-            this.lsbFriday.Size = new System.Drawing.Size(98, 48);
-            this.lsbFriday.TabIndex = 1;
-            this.lsbFriday.Click += new System.EventHandler(this.Settime_Click);
-            // 
-            // lsbSaturday
-            // 
-            this.lsbSaturday.BackColor = System.Drawing.SystemColors.Control;
-            this.lsbSaturday.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lsbSaturday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsbSaturday.FormattingEnabled = true;
-            this.lsbSaturday.Location = new System.Drawing.Point(0, 0);
-            this.lsbSaturday.Name = "lsbSaturday";
-            this.lsbSaturday.Size = new System.Drawing.Size(98, 48);
-            this.lsbSaturday.TabIndex = 1;
-            this.lsbSaturday.Click += new System.EventHandler(this.Settime_Click);
-            // 
-            // lsbSunday
-            // 
-            this.lsbSunday.BackColor = System.Drawing.SystemColors.Control;
-            this.lsbSunday.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lsbSunday.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsbSunday.FormattingEnabled = true;
-            this.lsbSunday.Location = new System.Drawing.Point(0, 0);
-            this.lsbSunday.Name = "lsbSunday";
-            this.lsbSunday.Size = new System.Drawing.Size(98, 48);
-            this.lsbSunday.TabIndex = 1;
-            this.lsbSunday.Click += new System.EventHandler(this.Settime_Click);
             // 
             // lblEmployee
             // 

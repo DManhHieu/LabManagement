@@ -13,18 +13,40 @@ namespace QuanLyThanhVien.Controllers
     {
         public static frmEmployees frmEmployees;
         public static urcEmployee urcEmployee;
+        public static int SelectID;
         public static void LoadList()
         {
             using (var _context=new DBLabManagementEntities())
             {
                 foreach(var employee in _context.Employees)
                 {
-                    if(employee.IDLAB==frmMain._employee.IDLAB)
-                        frmEmployees.AddEmployee(employee);
+                    if(employee.IDLAB==mainController.Lab.IDLab)
+                        frmEmployees.AddEmployee(employee.IDEmployee);
                 }
             }
         }
-        
+        public static List<Employee> ListEmployee()
+        {
+            using (var _context = new DBLabManagementEntities())
+            {
+               return _context.Employees.Where(x => x.IDLAB == mainController.Lab.IDLab).ToList();
+               
+            }
+        }
+        public static Employee SelectEmployee
+        {
+            get
+            {
+                if (SelectID == -1)
+                {
+                    return null;
+                }
+                using (var _context = new DBLabManagementEntities())
+                {
+                    return _context.Employees.FirstOrDefault(x=>x.IDEmployee==SelectID);
+                }
+            }
+        }
         public static Employee GetEmployee(int ID)
         {
             using (var _context=new DBLabManagementEntities())
@@ -37,7 +59,7 @@ namespace QuanLyThanhVien.Controllers
             using (var _context=new DBLabManagementEntities())
             {
                 bool isAdd=false;
-                if (employee.IDEmployee == -1)
+                if (SelectID==-1)
                 {
                     isAdd = true;
                     var Ids = (from e in _context.Employees select e.IDEmployee).ToList();
@@ -53,21 +75,22 @@ namespace QuanLyThanhVien.Controllers
                 }
                 else
                 {
+                    if(urcEmployee!=null)
                     urcEmployee.Employee = employee;
                 }
                 _context.Employees.AddOrUpdate(employee);
                 _context.SaveChanges();
                 if (isAdd)
                 {
-                    frmEmployees.AddEmployee(employee);
+                    frmEmployees.AddEmployee(employee.IDEmployee);
                 }
             }
         }
-        public static void Delete(int id)
+        public static void Delete()
         {
             using(var _context=new DBLabManagementEntities())
             {
-                var EmployeeDelete = _context.Employees.FirstOrDefault(x => x.IDEmployee == id);
+                var EmployeeDelete = _context.Employees.FirstOrDefault(x => x.IDEmployee == SelectID);
                 if (EmployeeDelete != null)
                 {
                     _context.Employees.Remove(EmployeeDelete);
@@ -75,6 +98,25 @@ namespace QuanLyThanhVien.Controllers
                     urcEmployee.Dispose();
                 }
 
+            }
+        }
+        public static bool IsManager
+        {
+            get
+            {
+                using (var _context = new DBLabManagementEntities())
+                {
+                    var ep = _context.Employees.FirstOrDefault(x => x.IDEmployee == SelectID);
+
+                    return ep.IDEmployee == ep.Lab.IDMangager;
+                }
+            }
+        }
+        public static List<Employee> ListEmployee(string t)
+        {
+            using(var _context=new DBLabManagementEntities())
+            {
+                return _context.Employees.Where(x => x.IDLAB == mainController.Lab.IDLab && (x.FirstName + " " + x.LastName).Contains(t)).ToList();
             }
         }
     }

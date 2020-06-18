@@ -58,7 +58,9 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\mainController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\TaskController.cs" />
+    <Compile Include="Controllers\TimeWorkController.cs" />
     <Compile Include="Models\DBLabManagement.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -91,6 +93,12 @@
     </Compile>
     <Compile Include="Models\TimeWork.cs">
       <DependentUpon>DBLabManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmCreateLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmCreateLab.Designer.cs">
+      <DependentUpon>frmCreateLab.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmListSalary.cs">
       <SubType>Form</SubType>
@@ -190,6 +198,9 @@
     <Compile Include="Views\urcWorkTime.Designer.cs">
       <DependentUpon>urcWorkTime.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\frmCreateLab.resx">
+      <DependentUpon>frmCreateLab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmListSalary.resx">
       <DependentUpon>frmListSalary.cs</DependentUpon>
     </EmbeddedResource>

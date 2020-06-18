@@ -12,29 +12,30 @@ namespace QuanLyThanhVien.Views
 {
     public partial class frmListTask : Form
     {
-        private int _id;
-        public frmListTask(int ID)
+        private Employee Employee { get; set; }
+        public frmListTask(Employee employee)
         {
             InitializeComponent();
-            _id = ID;
-            lblNameEmployee.Text = EmployeeController.GetEmployee(ID).FirstName + " " + EmployeeController.GetEmployee(ID).LastName;
-            lblPosition.Text = EmployeeController.GetEmployee(ID).Position;
-            TaskController.frmListTask = this;
-            TaskController.LoadListTask(ID);
+            Employee = employee;
+            lblNameEmployee.Text = employee.ToString();
+            lblPosition.Text = employee.Position;
+            TaskController.LoadListTask(employee,this);
         }
         public void AddExpiredTask(Task task)
         {
-            urcTask urcTask = new urcTask(task);
+          
+            urcTask urcTask = new urcTask(task,this);
+
             flpExpired.Controls.Add(urcTask);
         }
         public void AddDoingTask(Task task)
         {
-            urcTask urcTask = new urcTask(task);
+            urcTask urcTask = new urcTask(task,this);
             flpDoing.Controls.Add(urcTask);
         }
         public void AddCompletegTask(Task task)
         {
-            urcTask urcTask = new urcTask(task);
+            urcTask urcTask = new urcTask(task,this);
             flpComplete.Controls.Add(urcTask);
         }
         private void frmTask_Load(object sender, EventArgs e)
@@ -71,11 +72,18 @@ namespace QuanLyThanhVien.Views
 
         private void txtNameNewTask_Enter(object sender, EventArgs e)
         {
-            cbNewTask.Visible = true;
-            label52.Visible = true;
-            label53.Visible = true;
-            dtpEndDateNewTask.Visible = true;
-            dtpStartDateNewTask.Visible = true;
+            if (txtNameNewTask.Text == "Thêm công việc mới")
+            {
+                txtNameNewTask.Clear();
+                cbNewTask.Visible = true;
+                label52.Visible = true;
+                label53.Visible = true;
+                dtpEndDateNewTask.Visible = true;
+                dtpStartDateNewTask.Visible = true;
+                cbProject.Visible = true;
+               
+                cbProject.Items.AddRange(TaskController.GetListProject().ToArray()  );
+            }
         }
 
         private void txtNameNewTask_KeyPress(object sender, KeyPressEventArgs e)
@@ -86,11 +94,26 @@ namespace QuanLyThanhVien.Views
                 task.TaskName = txtNameNewTask.Text;
                 task.StartDate = dtpStartDateNewTask.Value;
                 task.EndDate = dtpEndDateNewTask.Value;
-                task.Employees.Add(EmployeeController.GetEmployee(_id));
+                //task.IDProject = 0;
                 task.IDTask = -1;
-                task.IDProject = 0;
-                
-                TaskController.AddOrUpdateTask(task);
+                if (cbProject.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Chưa chọn dự án");
+                    return;
+                }
+                task.IDProject = TaskController.GetListProject()[cbProject.SelectedIndex].IDProject;
+                ActiveControl = null;
+                TaskController.AddNewTask(task,Employee,this);
+                txtNameNewTask.Clear();
+                txtNameNewTask.Text = "Thêm công việc mới";
+
+                dtpStartDateNewTask.Visible = false;
+                dtpEndDateNewTask.Visible = false;
+                label52.Visible = false;
+                cbProject.Visible = false;
+                cbProject.Items.Clear();
+                cbProject.Text = "Project";
+                label53.Visible = false;
             }
         }
     }

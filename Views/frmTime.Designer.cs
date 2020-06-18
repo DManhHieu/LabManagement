@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpDateSelect = new System.Windows.Forms.DateTimePicker();
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
             this.btnToday = new System.Windows.Forms.Button();
@@ -68,6 +69,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dtpDateSelect);
             this.panel1.Controls.Add(this.btnRight);
             this.panel1.Controls.Add(this.btnLeft);
             this.panel1.Controls.Add(this.btnToday);
@@ -77,6 +79,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1036, 34);
             this.panel1.TabIndex = 0;
+            // 
+            // dtpDateSelect
+            // 
+            this.dtpDateSelect.Location = new System.Drawing.Point(208, 6);
+            this.dtpDateSelect.Name = "dtpDateSelect";
+            this.dtpDateSelect.Size = new System.Drawing.Size(19, 20);
+            this.dtpDateSelect.TabIndex = 2;
+            this.dtpDateSelect.CloseUp += new System.EventHandler(this.dtpDateSelect_CloseUp);
             // 
             // btnRight
             // 
@@ -89,6 +99,7 @@
             this.btnRight.TabIndex = 1;
             this.btnRight.Text = ">";
             this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
             // btnLeft
             // 
@@ -101,6 +112,7 @@
             this.btnLeft.TabIndex = 1;
             this.btnLeft.Text = "<";
             this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // btnToday
             // 
@@ -112,6 +124,7 @@
             this.btnToday.TabIndex = 1;
             this.btnToday.Text = "Hôm nay";
             this.btnToday.UseVisualStyleBackColor = true;
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
             // lblWeek
             // 
@@ -346,6 +359,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTime";
             this.Text = "frmTime";
+            this.Load += new System.EventHandler(this.frmTime_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -389,5 +403,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DateTimePicker dtpDateSelect;
     }
 }

@@ -10,25 +10,36 @@ namespace QuanLyThanhVien.Controllers
 {
     public class LoginController
     {
-        public static bool Manager = false;
         public static bool IsLogin = false;
-        public static int IDLab { get; set; }
         public static bool Login(string UserName,string password)
         {
             using (var _context=new DBLabManagementEntities())
             {
-                var employee= _context.Employees.FirstOrDefault(x => x.UserName == UserName && x.EPassword == password);
+                IsLogin = false;
+                var employee= _context.Employees.FirstOrDefault(x => x.UserName.Trim() == UserName && x.EPassword.Trim() == password);
                 if (employee != null)
                 {
                     IsLogin = true;
-                    frmMain._employee = employee;
-                    if(employee.IDLAB!=null)
-                    IDLab = (int)employee.IDLAB;
-                    else { IDLab = 0; }
+                    mainController.EmployeeLogin = employee;
                     return true;
                 }
             }
             return false;
+        }
+        public static void AddNewLab(Lab lab, Employee employee)
+        {
+            using(var _context=new DBLabManagementEntities())
+            {
+                lab.IDLab = _context.Labs.Count();
+                employee.IDEmployee = _context.Employees.Count();
+                lab.IDMangager = employee.IDEmployee;
+                employee.IDLAB = lab.IDLab;
+                employee.Lab = lab;
+                lab.Employees.Add(employee);
+                _context.Labs.Add(lab);
+                _context.Employees.Add(employee);
+                _context.SaveChanges();
+            }
         }
     }
 }

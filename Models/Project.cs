@@ -28,11 +28,17 @@ namespace QuanLyThanhVien.Models
         public string Description { get; set; }
         public string ProjectName { get; set; }
         public Nullable<int> IDManager { get; set; }
+        public Nullable<int> IDLab { get; set; }
     
         public virtual Employee Employee { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Task> Tasks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employee> Employees { get; set; }
+        public virtual Lab Lab { get; set; }
+        public override string ToString()
+        {
+            return ProjectName;
+        }
     }
 }

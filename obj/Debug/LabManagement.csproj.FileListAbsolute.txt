@@ -52,3 +52,4 @@ D:\Tài liệu\GitHub\LabManagement\bin\Debug\EntityFramework.xml
 D:\Tài liệu\GitHub\LabManagement\bin\Debug\EntityFramework.SqlServer.xml
 D:\Tài liệu\GitHub\LabManagement\obj\Debug\LabManagement.csproj.CopyComplete
 D:\Tài liệu\GitHub\LabManagement\obj\Debug\LabManagement.csprojAssemblyReference.cache
+D:\Tài liệu\GitHub\LabManagement\obj\Debug\QuanLyThanhVien.Views.frmCreateLab.resources

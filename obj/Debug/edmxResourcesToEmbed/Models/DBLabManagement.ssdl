@@ -48,6 +48,7 @@
     <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="ProjectName" Type="nvarchar" MaxLength="255" />
     <Property Name="IDManager" Type="int" />
+    <Property Name="IDLab" Type="int" />
   </EntityType>
   <EntityType Name="Salary">
     <Key>
@@ -197,6 +198,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Project_Lab">
+    <End Role="Lab" Type="Self.Lab" Multiplicity="0..1" />
+    <End Role="Project" Type="Self.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lab">
+        <PropertyRef Name="IDLab" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="IDLab" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="DBLabManagementModelStoreContainer">
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="EmployeeProject" EntityType="Self.EmployeeProject" Schema="dbo" store:Type="Tables" />
@@ -241,6 +254,10 @@
     <AssociationSet Name="FK__TimeWork__IDEmpl__36B12243" Association="Self.FK__TimeWork__IDEmpl__36B12243">
       <End Role="Employee" EntitySet="Employee" />
       <End Role="TimeWork" EntitySet="TimeWork" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Lab" Association="Self.FK_Project_Lab">
+      <End Role="Lab" EntitySet="Lab" />
+      <End Role="Project" EntitySet="Project" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

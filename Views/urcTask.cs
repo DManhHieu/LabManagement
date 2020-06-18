@@ -13,38 +13,78 @@ namespace QuanLyThanhVien.Views
 {
     public partial class urcTask : UserControl
     {
-        private Task Task;
-        public urcTask(Task task)
+        private Task _task;
+        private frmListTask _frmListTask;
+        private frmInfoProject _infoPorject;
+        public urcTask(Task task,frmListTask frmListTask)
         {
             InitializeComponent();
+            this.Click += InfoTask;
+            lblTaskName.Click += InfoTask;
+            _frmListTask = frmListTask;
             Task = task;
-            lblTaskName.Text = task.TaskName;
-            lblStartDate.Text = task.StartDate.ToString();
-            lblEndDate.Text = task.EndDate.ToString();
-            if (task.Status == true.ToString())
-                cbComplete.Checked = true;
-           
+        }
+        public urcTask(Task task, frmInfoProject infoProject)
+        {
+            InitializeComponent();
+            this.Click += InfoTaskProject_Click;
+            lblTaskName.Click += InfoTaskProject_Click;
+            _infoPorject = infoProject;
+            Task = task;
+
         }
 
-        private void InfoTask(object sender, EventArgs e)
+        private void InfoTaskProject_Click(object sender, EventArgs e)
         {
-            frmInfoTask infoTask = new frmInfoTask(Task);
+
+            frmInfoTask infoTask = new frmInfoTask(_task, _infoPorject, this);
             infoTask.ShowDialog();
         }
 
+        private Task Task
+        {
+            get
+            {
+                return _task;
+            }
+            set
+            {
+                _task = value;
+                lblTaskName.Text = value.TaskName;
+                lblStartDate.Text = value.StartDate.ToString();
+                lblEndDate.Text = value.EndDate.ToString();
+                if (TaskController.GetProject(value) != null)
+                    lblProjectName.Text = TaskController.GetProject(value).ToString();
+                if (value.Status == true.ToString())
+                    cbComplete.Checked = true;
+            }
+        }
+        private void InfoTask(object sender, EventArgs e)
+        {
+
+            frmInfoTask infoTask = new frmInfoTask(_task,_frmListTask,this);
+            infoTask.ShowDialog();
+        }
         private void cbComplete_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbComplete.Checked.ToString() != Task.Status) 
+            if (cbComplete.Checked.ToString() != _task.Status) 
             {
-                Task.Status = cbComplete.Checked.ToString();
-                TaskController.AddOrUpdateTask(Task);
-                this.Dispose();
+                _task.Status = cbComplete.Checked.ToString();
+                _task.Employees = TaskController.GetListEmployee(_task);
+                TaskController.AddOrUpdateTask(_task);
             }
          
         
             //
             //this.Dispose();
 
+        }
+
+
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            TaskController.Delete(_task,this);
         }
     }
 }

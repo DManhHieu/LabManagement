@@ -18,6 +18,7 @@
         <AssociationConnector Association="DBLabManagementModel.FK__Task__IDProject__2C3393D0" ManuallyRouted="false" />
         <AssociationConnector Association="DBLabManagementModel.EmployeeProject" ManuallyRouted="false" />
         <AssociationConnector Association="DBLabManagementModel.TASK_EMPLOYEE" ManuallyRouted="false" />
+        <AssociationConnector Association="DBLabManagementModel.FK_Project_Lab" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

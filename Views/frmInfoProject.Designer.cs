@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.flpListTask = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.flListTasks = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnAddTask = new System.Windows.Forms.Button();
@@ -56,9 +57,9 @@
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.txtProjectName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -72,6 +73,8 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.panel12);
+            this.panel1.Controls.Add(this.flpListTask);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -80,6 +83,24 @@
             this.panel1.Size = new System.Drawing.Size(891, 506);
             this.panel1.TabIndex = 0;
             // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 257);
+            this.panel12.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(891, 30);
+            this.panel12.TabIndex = 5;
+            // 
+            // flpListTask
+            // 
+            this.flpListTask.AutoSize = true;
+            this.flpListTask.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flpListTask.Location = new System.Drawing.Point(0, 257);
+            this.flpListTask.Name = "flpListTask";
+            this.flpListTask.Size = new System.Drawing.Size(891, 0);
+            this.flpListTask.TabIndex = 4;
+            // 
             // panel4
             // 
             this.panel4.AutoSize = true;
@@ -87,7 +108,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 218);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(891, 69);
+            this.panel4.Size = new System.Drawing.Size(891, 39);
             this.panel4.TabIndex = 1;
             // 
             // panel5
@@ -98,28 +119,19 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(891, 69);
+            this.panel5.Size = new System.Drawing.Size(891, 39);
             this.panel5.TabIndex = 6;
             // 
             // panel15
             // 
             this.panel15.AutoSize = true;
-            this.panel15.Controls.Add(this.panel12);
             this.panel15.Controls.Add(this.flListTasks);
             this.panel15.Controls.Add(this.panel6);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(891, 69);
+            this.panel15.Size = new System.Drawing.Size(891, 39);
             this.panel15.TabIndex = 2;
-            // 
-            // panel12
-            // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 39);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(891, 30);
-            this.panel12.TabIndex = 3;
             // 
             // flListTasks
             // 
@@ -205,6 +217,7 @@
             this.txtTaskName.Size = new System.Drawing.Size(264, 26);
             this.txtTaskName.TabIndex = 5;
             this.txtTaskName.Text = "Thêm công việc";
+            this.txtTaskName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaskName_KeyPress);
             // 
             // panel10
             // 
@@ -268,6 +281,8 @@
             this.lbSearchEmployees.Size = new System.Drawing.Size(200, 82);
             this.lbSearchEmployees.TabIndex = 40;
             this.lbSearchEmployees.Visible = false;
+            this.lbSearchEmployees.DoubleClick += new System.EventHandler(this.lbSearchEmployees_DoubleClick);
+            this.lbSearchEmployees.Leave += new System.EventHandler(this.lbSearchEmployees_Leave);
             // 
             // txtSearchEmployee
             // 
@@ -292,7 +307,7 @@
             // 
             // rtDescription
             // 
-            this.rtDescription.BackColor = System.Drawing.SystemColors.Control;
+            this.rtDescription.BackColor = System.Drawing.SystemColors.Window;
             this.rtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtDescription.Location = new System.Drawing.Point(10, 76);
@@ -363,51 +378,53 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnCancel);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 477);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(891, 29);
             this.panel2.TabIndex = 1;
             // 
-            // button3
+            // btnCancel
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(497, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Hủy bỏ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(497, 0);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 0;
+            this.btnCancel.Text = "Hủy bỏ";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(416, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(416, 0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 0;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(335, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(335, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmInfoProject
             // 
@@ -441,9 +458,9 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
@@ -455,7 +472,6 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.DateTimePicker dtpTaskEndDate;
         private System.Windows.Forms.DateTimePicker dtpTaskStartDate;
-        private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.FlowLayoutPanel flListTasks;
         private System.Windows.Forms.Button btnAddTask;
         private System.Windows.Forms.Panel panel13;
@@ -470,5 +486,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.TextBox txtProjectName;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.FlowLayoutPanel flpListTask;
     }
 }

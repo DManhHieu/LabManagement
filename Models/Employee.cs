@@ -54,7 +54,7 @@ namespace QuanLyThanhVien.Models
         public virtual ICollection<Task> Tasks { get; set; }
         public override string ToString()
         {
-            return FirstName+ " " + LastName;
+            return FirstName+" "+LastName;
         }
     }
 }

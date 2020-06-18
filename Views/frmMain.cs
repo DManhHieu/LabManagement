@@ -18,16 +18,24 @@ namespace QuanLyThanhVien.Views
         public frmMain()
         {
             InitializeComponent();
-
             mainController._main = this;
+            this.FormClosed += FrmMain_FormClosed;
         }
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void ResetMenu()
         {
+            this.lblControl.Text = "Xin chào " + mainController.EmployeeLogin.ToString();
             this.pnlRimDashBoard.BackColor = this.pnlMenu.BackColor;
             this.pnlRimEmployees.BackColor = this.pnlMenu.BackColor;
             this.pnlRimProject.BackColor = this.pnlMenu.BackColor;
             this.pnlRimTime.BackColor = this.pnlMenu.BackColor;
             this.pnlRimSalary.BackColor = this.pnlMenu.BackColor;
+            this.pnlRimProfile.BackColor = this.pnlMenu.BackColor;
             this.activity.Clear();
             this.pnlActivity.Controls.Clear();
         }
@@ -59,6 +67,11 @@ namespace QuanLyThanhVien.Views
                     this.activity.Last().Visible = true;
                     this.lblControl.Text = this.activity.Last().Text;
                 }
+
+            }
+            if(activity.Count== 0)
+            {
+                ResetMenu();
             }
 
         }
@@ -139,6 +152,13 @@ namespace QuanLyThanhVien.Views
         private void frmMain_Load(object sender, EventArgs e)
         {
 
+            Login();
+            //EmployeeController.IsManager(_employee.IDEmployee);
+            //this.lblLabName.Text = mainController.LabName(_employee);
+
+        }
+        private void Login()
+        {
             frmLogin frmLogin = new frmLogin();
             frmLogin.ShowDialog();
             if (!LoginController.IsLogin)
@@ -146,11 +166,35 @@ namespace QuanLyThanhVien.Views
                 this.Close();
                 return;
             }
-            this.lblControl.Text = "Xin chào " + _employee.FirstName + " " + _employee.LastName;
-            //this.lblLabName.Text = _employee.LAB.LabName; Không sử dụng như thế này được ? 
 
-            this.lblLabName.Text = mainController.LabName(_employee);
+            this.lblControl.Text = "Xin chào " + mainController.EmployeeLogin.ToString();
+            this.lblLabName.Text = mainController.Lab.LabName;
+        }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            //this.Visible = false;
+            //Login();
+            //if (!LoginController.IsLogin) return;
+            this.Visible = false;
+            frmMain NewfrmMain = new frmMain();
+            NewfrmMain.Show();
+            this.Dispose(false);
+        }
 
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            if (this.pnlRimProfile.BackColor == Color.Blue)
+            {
+                return;
+            }
+            ResetMenu();
+            this.pnlRimProfile.BackColor = Color.Blue;
+            EmployeeController.SelectID = mainController.EmployeeLogin.IDEmployee;
+            EmployeeController.urcEmployee = null;
+            frmInfoEmployee info = new frmInfoEmployee();
+
+            info.Text = "Thông tin cá nhân ";
+            SetView(info);
         }
     }
 }

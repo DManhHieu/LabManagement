@@ -46,6 +46,7 @@
             this.dtpDay.Name = "dtpDay";
             this.dtpDay.Size = new System.Drawing.Size(200, 20);
             this.dtpDay.TabIndex = 0;
+            this.dtpDay.ValueChanged += new System.EventHandler(this.dtpDay_ValueChanged);
             // 
             // lblNameEmployee
             // 
@@ -87,6 +88,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dtpEndTimeNew
             // 

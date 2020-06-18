@@ -34,6 +34,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblControl = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.lblLabName = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnDashBoard = new System.Windows.Forms.Button();
@@ -51,6 +52,9 @@
             this.pnlMenuEmployee = new System.Windows.Forms.Panel();
             this.btnEmployees = new System.Windows.Forms.Button();
             this.pnlRimEmployees = new System.Windows.Forms.Panel();
+            this.pnlProfile = new System.Windows.Forms.Panel();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.pnlRimProfile = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlMenu.SuspendLayout();
@@ -59,6 +63,7 @@
             this.pnlMenuTime.SuspendLayout();
             this.pnlMenuSalary.SuspendLayout();
             this.pnlMenuEmployee.SuspendLayout();
+            this.pnlProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,18 +110,32 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnlMenu.Controls.Add(this.btnLogout);
             this.pnlMenu.Controls.Add(this.lblLabName);
             this.pnlMenu.Controls.Add(this.panel4);
             this.pnlMenu.Controls.Add(this.pnlMenuProject);
             this.pnlMenu.Controls.Add(this.pnlMenuTime);
             this.pnlMenu.Controls.Add(this.pnlMenuSalary);
             this.pnlMenu.Controls.Add(this.button4);
+            this.pnlMenu.Controls.Add(this.pnlProfile);
             this.pnlMenu.Controls.Add(this.pnlMenuEmployee);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(170, 575);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Location = new System.Drawing.Point(45, 519);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(74, 44);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // lblLabName
             // 
@@ -167,7 +186,7 @@
             // 
             this.pnlMenuProject.Controls.Add(this.btnProject);
             this.pnlMenuProject.Controls.Add(this.pnlRimProject);
-            this.pnlMenuProject.Location = new System.Drawing.Point(0, 321);
+            this.pnlMenuProject.Location = new System.Drawing.Point(0, 360);
             this.pnlMenuProject.Name = "pnlMenuProject";
             this.pnlMenuProject.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuProject.TabIndex = 5;
@@ -202,7 +221,7 @@
             // 
             this.pnlMenuTime.Controls.Add(this.btnTime);
             this.pnlMenuTime.Controls.Add(this.pnlRimTime);
-            this.pnlMenuTime.Location = new System.Drawing.Point(0, 275);
+            this.pnlMenuTime.Location = new System.Drawing.Point(0, 314);
             this.pnlMenuTime.Name = "pnlMenuTime";
             this.pnlMenuTime.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuTime.TabIndex = 4;
@@ -237,7 +256,7 @@
             // 
             this.pnlMenuSalary.Controls.Add(this.btnSalary);
             this.pnlMenuSalary.Controls.Add(this.pnlRimSalary);
-            this.pnlMenuSalary.Location = new System.Drawing.Point(0, 367);
+            this.pnlMenuSalary.Location = new System.Drawing.Point(0, 406);
             this.pnlMenuSalary.Name = "pnlMenuSalary";
             this.pnlMenuSalary.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuSalary.TabIndex = 3;
@@ -284,7 +303,7 @@
             // 
             this.pnlMenuEmployee.Controls.Add(this.btnEmployees);
             this.pnlMenuEmployee.Controls.Add(this.pnlRimEmployees);
-            this.pnlMenuEmployee.Location = new System.Drawing.Point(0, 229);
+            this.pnlMenuEmployee.Location = new System.Drawing.Point(0, 268);
             this.pnlMenuEmployee.Name = "pnlMenuEmployee";
             this.pnlMenuEmployee.Size = new System.Drawing.Size(170, 40);
             this.pnlMenuEmployee.TabIndex = 0;
@@ -315,6 +334,41 @@
             this.pnlRimEmployees.Size = new System.Drawing.Size(3, 40);
             this.pnlRimEmployees.TabIndex = 0;
             // 
+            // pnlProfile
+            // 
+            this.pnlProfile.Controls.Add(this.btnProfile);
+            this.pnlProfile.Controls.Add(this.pnlRimProfile);
+            this.pnlProfile.Location = new System.Drawing.Point(0, 229);
+            this.pnlProfile.Name = "pnlProfile";
+            this.pnlProfile.Size = new System.Drawing.Size(170, 40);
+            this.pnlProfile.TabIndex = 0;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(3, 0);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(167, 40);
+            this.btnProfile.TabIndex = 1;
+            this.btnProfile.Text = " Profile";
+            this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // pnlRimProfile
+            // 
+            this.pnlRimProfile.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlRimProfile.Location = new System.Drawing.Point(0, 0);
+            this.pnlRimProfile.Name = "pnlRimProfile";
+            this.pnlRimProfile.Size = new System.Drawing.Size(3, 40);
+            this.pnlRimProfile.TabIndex = 0;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +389,7 @@
             this.pnlMenuTime.ResumeLayout(false);
             this.pnlMenuSalary.ResumeLayout(false);
             this.pnlMenuEmployee.ResumeLayout(false);
+            this.pnlProfile.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -363,6 +418,10 @@
         private System.Windows.Forms.Button btnDashBoard;
         private System.Windows.Forms.Panel pnlRimDashBoard;
         private System.Windows.Forms.Label lblLabName;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Panel pnlProfile;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Panel pnlRimProfile;
     }
 }
 

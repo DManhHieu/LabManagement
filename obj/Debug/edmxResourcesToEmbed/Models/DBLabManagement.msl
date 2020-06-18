@@ -35,6 +35,7 @@
     <EntitySetMapping Name="Projects">
       <EntityTypeMapping TypeName="DBLabManagementModel.Project">
         <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="IDLab" ColumnName="IDLab" />
           <ScalarProperty Name="IDProject" ColumnName="IDProject" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="StartDate" ColumnName="StartDate" />

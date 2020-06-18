@@ -16,17 +16,25 @@ namespace QuanLyThanhVien.Views
     public partial class frmInfoEmployee : Form
     {
       
-        public frmInfoEmployee(int id)
+        public frmInfoEmployee()
         {
             InitializeComponent();
-            ID = id;
-            IDLab = LoginController.IDLab;
-            Password = "0";
-            if (ID != -1)
+            
+            if (EmployeeController.SelectEmployee!=null)
             {
-                Employee = EmployeeController.GetEmployee(ID);
+                Employee = EmployeeController.SelectEmployee;
+                btnDelete.Visible = !EmployeeController.IsManager;
+                btnDelete.Visible = !(Employee.IDEmployee == mainController.EmployeeLogin.IDEmployee);
+                lblPassword.Visible = Employee.IDEmployee == mainController.EmployeeLogin.IDEmployee;
+                txtMaNhanVien.ReadOnly= !EmployeeController.IsManager;
+                txtPassword.Visible = Employee.IDEmployee == mainController.EmployeeLogin.IDEmployee;
+                
             }
-
+            else
+            {
+                Password = "0000";
+            }
+         
 
         }
         //public void SetEmployee(Employee employee)
@@ -65,30 +73,55 @@ namespace QuanLyThanhVien.Views
                 employee.StartDate = StartDate;
                 employee.EPassword = Password;
                 employee.IDLAB = IDLab;
+                
                 return employee;
             }
             set
             {
+                if(value.IDEmployee!=null)
                 ID = value.IDEmployee;
+                if(value.UserName!=null)
                 MaNhanVien = value.UserName;
+                if(value.FirstName!=null)
                 FirstName = value.FirstName;
+                if(value.LastName!=null)
                 LastName = value.LastName;
+                if(value.Birthday!=null)
                 Birthday = value.Birthday.Value;
+                if(value.PathAvatar!=null)
                 PathAvatar = value.PathAvatar;
+                if(value.CMND!=null)
                 CMND = value.CMND;
+                if(value.Address!=null)
                 Address = value.Address;
+                if(value.Email!=null)
                 Email = value.Email;
+                if(value.EPassword!=null)
                 Password = value.EPassword;
+                if(value.Position!=null)
                 Position = value.Position;
+                if(value.PhoneNumber!=null)
                 PhoneNumber = value.PhoneNumber;
+                if(value.Description!=null)
                 Description = value.Description;
-                StartDate = value.StartDate.Value;
+                if(value.StartDate!=null)
+                    StartDate = value.StartDate.Value;
                 if(value.IDLAB!=null)
                     IDLab = (int)value.IDLAB;
             }
         }
         private int ID { get; set; }
-        private string Password { get; set; }
+        private string Password 
+        {
+            get 
+            {
+                return txtPassword.Text;
+            }
+            set
+            {
+                txtPassword.Text = value.Trim();
+            }
+        }
         private int IDLab { get; set; }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -296,13 +329,18 @@ namespace QuanLyThanhVien.Views
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (ID == -1)
+            if (EmployeeController.SelectEmployee==null)
             {
                 ResetForm();
                 return;
             }
-            EmployeeController.Delete(ID);
+            EmployeeController.Delete();
             this.Close();
+        }
+
+        private void btnResetPassword_Click(object sender, EventArgs e)
+        {
+            Password = "0000";
         }
     }
 }

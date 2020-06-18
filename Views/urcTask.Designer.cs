@@ -72,18 +72,18 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(419, 39);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 7;
-            this.label6.Text = "End date";
+            this.label6.Text = "Kết thúc";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(220, 39);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Start date";
+            this.label5.Text = "Bắt đầu";
             // 
             // lblProjectName
             // 
@@ -102,7 +102,6 @@
             this.lblTaskName.TabIndex = 6;
             this.lblTaskName.Text = "Task name";
             this.lblTaskName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTaskName.Click += new System.EventHandler(this.InfoTask);
             // 
             // btnDelete
             // 
@@ -115,6 +114,7 @@
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "X";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // urcTask
             // 
@@ -131,7 +131,6 @@
             this.Controls.Add(this.lblTaskName);
             this.Name = "urcTask";
             this.Size = new System.Drawing.Size(865, 60);
-            this.Click += new System.EventHandler(this.InfoTask);
             this.ResumeLayout(false);
             this.PerformLayout();
 

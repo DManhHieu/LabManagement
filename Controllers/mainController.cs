@@ -12,18 +12,27 @@ namespace QuanLyThanhVien.Controllers
     public class mainController
     {
         public static frmMain _main;
-        public static string LabName(Employee employee)
+        public static Employee EmployeeLogin;
+        public static Lab Lab
         {
-            using(var _context=new DBLabManagementEntities())
+            get
             {
-                var lab = _context.Labs.FirstOrDefault(x => x.IDLab == employee.IDLAB);
-                if (lab == null)
+                using(var _context=new DBLabManagementEntities())
                 {
-                    return "";
+                    return _context.Labs.FirstOrDefault(x => x.IDLab == EmployeeLogin.IDLAB);
+                    
                 }
-
-                return lab.LabName;
-
+            }
+        }
+        public static bool IsManager
+        {
+            get
+            {
+                using(var _context=new DBLabManagementEntities())
+                {
+                    return Lab.IDMangager == EmployeeLogin.IDEmployee;
+                    //return EmployeeLogin.IDEmployee == EmployeeLogin.Lab.IDMangager;
+                }
             }
         }
         public static void SetView(Form form)

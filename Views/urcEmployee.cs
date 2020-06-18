@@ -19,26 +19,35 @@ namespace QuanLyThanhVien.Views
         {
             InitializeComponent();
             _ID = ID;
-            var employee = EmployeeController.GetEmployee(ID);
-            FullName = employee.FirstName + " " + employee.LastName;
-            Email = employee.Email;
-            Position = employee.Position;
-            PathAvatar = employee.PathAvatar;
+            Employee = EmployeeController.GetEmployee(ID);
+            button1.Visible = mainController.IsManager;
+
+            //FullName = employee.FirstName + " " + employee.LastName;
+            //Email = employee.Email;
+            //Position = employee.Position;
+            //PathAvatar = employee.PathAvatar;
         }
+        private Employee _employee;
         public Employee Employee
         {
+            get
+            {
+                return _employee;
+            }
             set
             {
                 FullName = value.FirstName + " " + value.LastName;
                 Email = value.Email;
                 Position = value.Position;
                 PathAvatar = value.PathAvatar;
+                _employee = value;
             }
         }
         private void button1_Click(object sender, EventArgs e)
         {
             EmployeeController.urcEmployee = this;
-            frmInfoEmployee thongtin = new frmInfoEmployee(_ID);
+            EmployeeController.SelectID = _ID;
+            frmInfoEmployee thongtin = new frmInfoEmployee();
             thongtin.Text = "Nhân viên " + FullName;
             mainController.SetView(thongtin);
 
@@ -84,7 +93,7 @@ namespace QuanLyThanhVien.Views
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            frmListTask task = new frmListTask(_ID);
+            frmListTask task = new frmListTask(Employee);
             mainController.SetView(task);
         }
     }

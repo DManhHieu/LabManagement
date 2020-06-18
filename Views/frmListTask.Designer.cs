@@ -33,6 +33,7 @@
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblNameEmployee = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbProject = new System.Windows.Forms.ComboBox();
             this.label53 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.dtpEndDateNewTask = new System.Windows.Forms.DateTimePicker();
@@ -82,7 +83,7 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 1;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Trở lại";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -106,6 +107,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbProject);
             this.panel1.Controls.Add(this.label53);
             this.panel1.Controls.Add(this.label52);
             this.panel1.Controls.Add(this.dtpEndDateNewTask);
@@ -118,31 +120,41 @@
             this.panel1.Size = new System.Drawing.Size(905, 50);
             this.panel1.TabIndex = 4;
             // 
+            // cbProject
+            // 
+            this.cbProject.FormattingEnabled = true;
+            this.cbProject.Location = new System.Drawing.Point(379, 14);
+            this.cbProject.Name = "cbProject";
+            this.cbProject.Size = new System.Drawing.Size(188, 21);
+            this.cbProject.TabIndex = 4;
+            this.cbProject.Text = "Dự án";
+            this.cbProject.Visible = false;
+            // 
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(361, 33);
+            this.label53.Location = new System.Drawing.Point(614, 28);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(56, 13);
             this.label53.TabIndex = 3;
-            this.label53.Text = "End date :";
+            this.label53.Text = "Kết thúc : ";
             this.label53.Visible = false;
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(358, 8);
+            this.label52.Location = new System.Drawing.Point(616, 3);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(62, 13);
+            this.label52.Size = new System.Drawing.Size(54, 13);
             this.label52.TabIndex = 3;
-            this.label52.Text = "Start date : ";
+            this.label52.Text = "Bắt đầu : ";
             this.label52.Visible = false;
             // 
             // dtpEndDateNewTask
             // 
             this.dtpEndDateNewTask.CustomFormat = "dd/MM/yyyy   hh/mm/ss";
             this.dtpEndDateNewTask.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndDateNewTask.Location = new System.Drawing.Point(423, 27);
+            this.dtpEndDateNewTask.Location = new System.Drawing.Point(684, 22);
             this.dtpEndDateNewTask.Name = "dtpEndDateNewTask";
             this.dtpEndDateNewTask.Size = new System.Drawing.Size(197, 20);
             this.dtpEndDateNewTask.TabIndex = 2;
@@ -152,7 +164,7 @@
             // 
             this.dtpStartDateNewTask.CustomFormat = "dd/MM/yyyy   hh/mm/ss";
             this.dtpStartDateNewTask.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDateNewTask.Location = new System.Drawing.Point(423, 5);
+            this.dtpStartDateNewTask.Location = new System.Drawing.Point(684, 0);
             this.dtpStartDateNewTask.Name = "dtpStartDateNewTask";
             this.dtpStartDateNewTask.Size = new System.Drawing.Size(197, 20);
             this.dtpStartDateNewTask.TabIndex = 2;
@@ -164,7 +176,7 @@
             this.txtNameNewTask.Name = "txtNameNewTask";
             this.txtNameNewTask.Size = new System.Drawing.Size(317, 20);
             this.txtNameNewTask.TabIndex = 1;
-            this.txtNameNewTask.Text = "Add new task";
+            this.txtNameNewTask.Text = "Thêm công việc mới";
             this.txtNameNewTask.Enter += new System.EventHandler(this.txtNameNewTask_Enter);
             this.txtNameNewTask.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNameNewTask_KeyPress);
             // 
@@ -370,5 +382,6 @@
         private System.Windows.Forms.TextBox txtNameNewTask;
         private System.Windows.Forms.CheckBox cbNewTask;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ComboBox cbProject;
     }
 }

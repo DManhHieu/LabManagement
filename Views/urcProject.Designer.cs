@@ -32,6 +32,7 @@
             this.lblEndDate = new System.Windows.Forms.Label();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblNameProject = new System.Windows.Forms.Label();
+            this.lblComplete = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pgbComplete
@@ -45,7 +46,8 @@
             // 
             // lblEndDate
             // 
-            this.lblEndDate.Location = new System.Drawing.Point(0, 102);
+            this.lblEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndDate.Location = new System.Drawing.Point(0, 78);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(250, 23);
             this.lblEndDate.TabIndex = 6;
@@ -54,7 +56,8 @@
             // 
             // lblStartDate
             // 
-            this.lblStartDate.Location = new System.Drawing.Point(0, 79);
+            this.lblStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDate.Location = new System.Drawing.Point(0, 55);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(250, 23);
             this.lblStartDate.TabIndex = 5;
@@ -63,6 +66,7 @@
             // 
             // lblNameProject
             // 
+            this.lblNameProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameProject.Location = new System.Drawing.Point(0, 0);
             this.lblNameProject.Name = "lblNameProject";
             this.lblNameProject.Size = new System.Drawing.Size(250, 41);
@@ -71,11 +75,22 @@
             this.lblNameProject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblNameProject.Click += new System.EventHandler(this.showinfo);
             // 
+            // lblComplete
+            // 
+            this.lblComplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplete.Location = new System.Drawing.Point(0, 114);
+            this.lblComplete.Name = "lblComplete";
+            this.lblComplete.Size = new System.Drawing.Size(250, 23);
+            this.lblComplete.TabIndex = 8;
+            this.lblComplete.Text = "100%";
+            this.lblComplete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // urcProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.lblComplete);
             this.Controls.Add(this.pgbComplete);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblStartDate);
@@ -94,5 +109,6 @@
         private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.Label lblStartDate;
         private System.Windows.Forms.Label lblNameProject;
+        private System.Windows.Forms.Label lblComplete;
     }
 }
