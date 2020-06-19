@@ -12,6 +12,9 @@ Hoàng Dương Hùng 18110296
 ![image](https://user-images.githubusercontent.com/61335680/84987124-d7e4cd00-b169-11ea-8a72-ccb03203e786.png)
 #### DBLabManagement Diagram :
 ![image](https://user-images.githubusercontent.com/61335680/84987279-0d89b600-b16a-11ea-8d19-ad88c1436dc0.png)
+## Trước khi sử dụng lưu ý tạo Database
+[Tạo database]( CreateDatabase.sql)
+
 ## Sản phẩm : 
 
 ### Đăng nhập 
