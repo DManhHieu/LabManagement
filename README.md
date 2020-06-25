@@ -7,6 +7,7 @@
 Hoàng Dương Hùng 18110296
 ```
 #### Giáo viên hướng dẫn : ***Huỳnh Xuân Phụng***
+[Báo cáo]( Báo-cáo-winform.docx)
 ## Diagram : 
 #### DatabaseDiagram : 
 ![image](https://user-images.githubusercontent.com/61335680/84987124-d7e4cd00-b169-11ea-8a72-ccb03203e786.png)
